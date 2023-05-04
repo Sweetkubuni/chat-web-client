@@ -1,31 +1,87 @@
 import { createSignal, onMount } from "solid-js";
-import ChatBody from "./ChatBody";
+import ChatBody, { ListElem, MessageType } from "./ChatBody";
 import ChatFooter from "./ChatFooter";
-import "./ChatWindow.css";
+import MessageReceive from "./MessageReceive";
+import MessageSent from "./MessageSent";
+// import "./ChatWindow.css";
+
+interface Message {
+    userId: string,
+    content: string
+}
 
 export default function ChatWindow() {
-    const [message, setMessage] = createSignal([]);
+
+    //TODO: replace userId with correct one when auth done
+    let socket: WebSocket;
+    const userId = Math.floor(Math.random() * 101);
+
+    const [messages, setMessages] = createSignal<Array<ListElem>>([]);
+
+
+    const addMessage = async (message: ListElem) => {
+        setMessages([...messages(), message])
+    }
+
+    const sendMessage = async (msg: string) => {
+
+        const message: Message = {
+            userId: userId.toString(),
+            content: msg
+        }
+
+        const json = JSON.stringify(message);
+
+        socket.send(json);
+
+        const messageData: ListElem = {
+            content: {
+                username: message.userId,
+                content: message.content
+            },
+            type: MessageType.SEND
+        };
+
+        console.log("Sent Message", json, messageData);
+
+        addMessage(messageData);
+        console.log(messages());
+    }
 
     onMount(async () => {
         // Create WebSocket connection.
-        const socket = new WebSocket("ws://localhost:8080");
+        socket = new WebSocket("ws://localhost:3000");
+
+        console.log("Here");
 
         // Connection opened
         socket.addEventListener("open", (event) => {
-            socket.send("I have connected");
         });
 
         // Listen for messages
-        socket.addEventListener("message", (event) => {
-            console.debug("Message from server ", event.data);
-            setMessage(event.data);
-        });
+        socket.onmessage = (event) => {
+            console.log("msg: ", event.data)
+
+            const message: Message = JSON.parse(event.data);
+
+            console.log("Received message", message);
+
+            const messageData: ListElem = {
+               content: {
+                    username: message.userId,
+                    content:  message.content
+               },
+               type: MessageType.RECEIVE
+            };
+            addMessage(messageData)
+            console.log("Hello: ", messages())
+        };
     });
 
     return <div class="container">
         <div class="chat-window">
-            <ChatBody />
-            <ChatFooter />
+            <ChatBody msgs={messages}/>
+            <ChatFooter sendMessage={sendMessage}/>
         </div>
     </div>
 }
