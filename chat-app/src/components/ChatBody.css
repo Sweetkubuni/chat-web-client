@@ -1,8 +1,9 @@
 .chat-body {
     flex: 1;
     padding: 10px;
-    overflow-y: hidden;
+    overflow-y: auto;
     margin: auto;
+    width: 100%;
 }
 
 .message-list {

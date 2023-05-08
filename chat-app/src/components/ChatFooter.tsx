@@ -1,15 +1,41 @@
-import { Accessor, Setter } from "solid-js";
+import { Accessor, Setter, createSignal } from "solid-js";
 
 interface ListArg {
-    sendMessage: (message: string) => Promise<void>
+  sendMessage: (message: string) => Promise<void>;
 }
 
 export default function ChatFooter(props: ListArg) {
-    let input : any;
-    return ( 
+  const [height, setHeight] = createSignal(38);
+  let input: any;
+
+  return (
     <div class="chat-footer">
-        <input type="text" class="message-input" placeholder="Type your message here..." ref={input} />
-        <button class="send-button" onClick={() => { if(!input.value.trim()) return;  props.sendMessage(input.value); input.value = "";} }>Send</button>
-    </div> 
+      <textarea
+        class="message-input"
+        placeholder="Type your message here..."
+        ref={input}
+        rows={1}
+        maxLength={200}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && e.shiftKey) {
+            e.preventDefault();
+            input.value += "\n";
+            if (height() < 152) {
+              setHeight(height() + 19);
+            }
+          } else if (e.key === "Enter") {
+            e.preventDefault();
+            if (!input.value.trim()) return;
+            props.sendMessage(input.value);
+            input.value = "";
+            setHeight(38);
+          }
+        }}
+        style={{
+          resize: "none",
+          height: `${height()}px`,
+        }}
+      />
+    </div>
   );
 }
