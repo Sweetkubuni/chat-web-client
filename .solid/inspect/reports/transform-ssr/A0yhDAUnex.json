@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.2_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.19_vite@4.1.4/node_modules/solid-start/dev/CsrRoot.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { Body, Html, Scripts } from \"solid-start\";\n\nexport default function Root() {\n  return (\n    <Html>\n      <Body>\n        <Scripts />\n      </Body>\n    </Html>\n  );\n}\n",
+      "start": 1683869511999,
+      "end": 1683869511999
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { Body, Html, Scripts } from \"solid-start\";\nexport default function Root() {\n  return _$createComponent(Html, {\n    get children() {\n      return _$createComponent(Body, {\n        get children() {\n          return _$createComponent(Scripts, {});\n        }\n      });\n    }\n  });\n}",
+      "start": 1683869511999,
+      "end": 1683869512007,
+      "order": "pre"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { Body, Html, Scripts } from \"solid-start\";\nexport default function Root() {\n  return _$createComponent(Html, {\n    get children() {\n      return _$createComponent(Body, {\n        get children() {\n          return _$createComponent(Scripts, {});\n        }\n      });\n    }\n  });\n}",
+      "start": 1683869512007,
+      "end": 1683869512007,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { Body, Html, Scripts } from \"/node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.2_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.19_vite@4.1.4/node_modules/solid-start/index.tsx\";\nexport default function Root() {\n  return _$createComponent(Html, {\n    get children() {\n      return _$createComponent(Body, {\n        get children() {\n          return _$createComponent(Scripts, {});\n        }\n      });\n    }\n  });\n}",
+      "start": 1683869512007,
+      "end": 1683869512008,
+      "order": "normal"
+    }
+  ]
+}

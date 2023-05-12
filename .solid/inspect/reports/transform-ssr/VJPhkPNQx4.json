@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/src/entry-server.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import {\n  createHandler,\n  renderAsync,\n  StartServer,\n} from \"solid-start/entry-server\";\n\nexport default createHandler(\n  renderAsync((event) => <StartServer event={event} />)\n);\n",
+      "start": 1683869511481,
+      "end": 1683869511481
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1683869511481,
+      "end": 1683869511565,
+      "order": "pre"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1683869511567,
+      "end": 1683869511568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"/node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.2_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.19_vite@4.1.4/node_modules/solid-start/entry-server/index.ts\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1683869511570,
+      "end": 1683869511578,
+      "order": "normal"
+    }
+  ]
+}

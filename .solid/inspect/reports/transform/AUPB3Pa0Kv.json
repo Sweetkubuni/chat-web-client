@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/src/components/Message.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".message {\n  margin-bottom: 10px;\n  padding: 10px;\n  border-radius: 10px;\n  max-width: 80%;\n  color: #fff;\n  text-align: start;\n}\n\n.message.received {\n  background-color: #a6bddb;\n  align-self: flex-start;\n  list-style-type: none; /* Add this line to remove bullet points */\n  width: fit-content;\n  padding: 10px;\n  margin-right: 10px;\n  border-radius: 10px;\n  box-sizing: border-box;\n}\n\n.message.sent {\n  background-color: #3c7b8e;\n  align-self: flex-end;\n  width: fit-content;\n  padding: 10px;\n  margin-right: 10px;\n  border-radius: 10px;\n  box-sizing: border-box;\n}\n\n.message-sender {\n  font-weight: bold;\n  margin-right: 10px;\n  text-align: start;\n  margin-bottom: 5px;\n}\n\n.message-text {\n  white-space: break-spaces;\n  font-size: 17px !important;\n}\n\n.admin-msg {\n  background-color: green !important;\n}\n\n.error-msg {\n  background-color: red !important;\n}\n\n.request-msg {\n  background-color: #ffef00 !important;\n  color: black !important;\n}\n",
+      "start": 1683869513969,
+      "end": 1683869513969
+    },
+    {
+      "name": "vite:css",
+      "result": ".message {\n  margin-bottom: 10px;\n  padding: 10px;\n  border-radius: 10px;\n  max-width: 80%;\n  color: #fff;\n  text-align: start;\n}\n\n.message.received {\n  background-color: #a6bddb;\n  align-self: flex-start;\n  list-style-type: none; /* Add this line to remove bullet points */\n  width: fit-content;\n  padding: 10px;\n  margin-right: 10px;\n  border-radius: 10px;\n  box-sizing: border-box;\n}\n\n.message.sent {\n  background-color: #3c7b8e;\n  align-self: flex-end;\n  width: fit-content;\n  padding: 10px;\n  margin-right: 10px;\n  border-radius: 10px;\n  box-sizing: border-box;\n}\n\n.message-sender {\n  font-weight: bold;\n  margin-right: 10px;\n  text-align: start;\n  margin-bottom: 5px;\n}\n\n.message-text {\n  white-space: break-spaces;\n  font-size: 17px !important;\n}\n\n.admin-msg {\n  background-color: green !important;\n}\n\n.error-msg {\n  background-color: red !important;\n}\n\n.request-msg {\n  background-color: #ffef00 !important;\n  color: black !important;\n}\n",
+      "start": 1683869513969,
+      "end": 1683869513969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/justin/Documents/chat-web-client/src/components/Message.css\"\nconst __vite__css = \".message {\\n  margin-bottom: 10px;\\n  padding: 10px;\\n  border-radius: 10px;\\n  max-width: 80%;\\n  color: #fff;\\n  text-align: start;\\n}\\n\\n.message.received {\\n  background-color: #a6bddb;\\n  align-self: flex-start;\\n  list-style-type: none; /* Add this line to remove bullet points */\\n  width: fit-content;\\n  padding: 10px;\\n  margin-right: 10px;\\n  border-radius: 10px;\\n  box-sizing: border-box;\\n}\\n\\n.message.sent {\\n  background-color: #3c7b8e;\\n  align-self: flex-end;\\n  width: fit-content;\\n  padding: 10px;\\n  margin-right: 10px;\\n  border-radius: 10px;\\n  box-sizing: border-box;\\n}\\n\\n.message-sender {\\n  font-weight: bold;\\n  margin-right: 10px;\\n  text-align: start;\\n  margin-bottom: 5px;\\n}\\n\\n.message-text {\\n  white-space: break-spaces;\\n  font-size: 17px !important;\\n}\\n\\n.admin-msg {\\n  background-color: green !important;\\n}\\n\\n.error-msg {\\n  background-color: red !important;\\n}\\n\\n.request-msg {\\n  background-color: #ffef00 !important;\\n  color: black !important;\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1683869513969,
+      "end": 1683869513969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/Message.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/justin/Documents/chat-web-client/src/components/Message.css\"\nconst __vite__css = \".message {\\n  margin-bottom: 10px;\\n  padding: 10px;\\n  border-radius: 10px;\\n  max-width: 80%;\\n  color: #fff;\\n  text-align: start;\\n}\\n\\n.message.received {\\n  background-color: #a6bddb;\\n  align-self: flex-start;\\n  list-style-type: none; /* Add this line to remove bullet points */\\n  width: fit-content;\\n  padding: 10px;\\n  margin-right: 10px;\\n  border-radius: 10px;\\n  box-sizing: border-box;\\n}\\n\\n.message.sent {\\n  background-color: #3c7b8e;\\n  align-self: flex-end;\\n  width: fit-content;\\n  padding: 10px;\\n  margin-right: 10px;\\n  border-radius: 10px;\\n  box-sizing: border-box;\\n}\\n\\n.message-sender {\\n  font-weight: bold;\\n  margin-right: 10px;\\n  text-align: start;\\n  margin-bottom: 5px;\\n}\\n\\n.message-text {\\n  white-space: break-spaces;\\n  font-size: 17px !important;\\n}\\n\\n.admin-msg {\\n  background-color: green !important;\\n}\\n\\n.error-msg {\\n  background-color: red !important;\\n}\\n\\n.request-msg {\\n  background-color: #ffef00 !important;\\n  color: black !important;\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1683869513969,
+      "end": 1683869513969,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/src/components/ChatBody.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".chat-body {\n    flex: 1;\n    padding: 10px;\n    overflow-y: auto;\n    margin: auto;\n    width: 100%;\n}\n\n.message-list {\n    display: flex;\n    flex-direction: column;\n    flex: 1;\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n}\n\n@media only screen and (min-width: 1200px){\n    .chat-body {\n        padding: 10rem;\n    }\n}\n\n",
+      "start": 1683869513940,
+      "end": 1683869513940
+    },
+    {
+      "name": "vite:css",
+      "result": ".chat-body {\n    flex: 1;\n    padding: 10px;\n    overflow-y: auto;\n    margin: auto;\n    width: 100%;\n}\n\n.message-list {\n    display: flex;\n    flex-direction: column;\n    flex: 1;\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n}\n\n@media only screen and (min-width: 1200px){\n    .chat-body {\n        padding: 10rem;\n    }\n}\n\n",
+      "start": 1683869513940,
+      "end": 1683869513940,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/justin/Documents/chat-web-client/src/components/ChatBody.css\"\nconst __vite__css = \".chat-body {\\n    flex: 1;\\n    padding: 10px;\\n    overflow-y: auto;\\n    margin: auto;\\n    width: 100%;\\n}\\n\\n.message-list {\\n    display: flex;\\n    flex-direction: column;\\n    flex: 1;\\n    list-style-type: none;\\n    padding: 0;\\n    margin: 0;\\n}\\n\\n@media only screen and (min-width: 1200px){\\n    .chat-body {\\n        padding: 10rem;\\n    }\\n}\\n\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1683869513940,
+      "end": 1683869513940,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/ChatBody.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/justin/Documents/chat-web-client/src/components/ChatBody.css\"\nconst __vite__css = \".chat-body {\\n    flex: 1;\\n    padding: 10px;\\n    overflow-y: auto;\\n    margin: auto;\\n    width: 100%;\\n}\\n\\n.message-list {\\n    display: flex;\\n    flex-direction: column;\\n    flex: 1;\\n    list-style-type: none;\\n    padding: 0;\\n    margin: 0;\\n}\\n\\n@media only screen and (min-width: 1200px){\\n    .chat-body {\\n        padding: 10rem;\\n    }\\n}\\n\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1683869513940,
+      "end": 1683869513941,
+      "order": "normal"
+    }
+  ]
+}

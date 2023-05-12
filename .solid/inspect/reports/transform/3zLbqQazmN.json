@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.2_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.19_vite@4.1.4/node_modules/solid-start/root/Meta.tsx?v=60753aa2",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { renderTags } from \"@solidjs/meta\";\nimport { useContext } from \"solid-js\";\nimport { ssr, useAssets } from \"solid-js/web\";\nimport { ServerContext } from \"../server/ServerContext\";\n\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}\n",
+      "start": 1683869513321,
+      "end": 1683869513321
+    },
+    {
+      "name": "solid",
+      "result": "import { renderTags } from \"@solidjs/meta\";\nimport { useContext } from \"solid-js\";\nimport { ssr, useAssets } from \"solid-js/web\";\nimport { ServerContext } from \"../server/ServerContext\";\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}",
+      "start": 1683869513321,
+      "end": 1683869513325,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { renderTags } from \"/node_modules/.pnpm/@solidjs+meta@0.28.2_solid-js@1.7.2/node_modules/@solidjs/meta/dist/index.jsx?v=60753aa2\";\nimport { useContext } from \"/node_modules/.vite/deps/solid-js.js?v=1564f02c\";\nimport { ssr, useAssets } from \"/node_modules/.vite/deps/solid-js_web.js?v=1564f02c\";\nimport { ServerContext } from \"/node_modules/.pnpm/solid-start@0.2.26_@solidjs+meta@0.28.2_@solidjs+router@0.8.2_solid-js@1.7.2_solid-start-node@0.2.19_vite@4.1.4/node_modules/solid-start/server/ServerContext.tsx?v=60753aa2\";\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}",
+      "start": 1683869513325,
+      "end": 1683869513327,
+      "order": "normal"
+    }
+  ]
+}
