@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/home/justin/Documents/chat-web-client/src/testdata/data.ts",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "\n\nexport const usernames: string[] = [\n  'LilithTheDevil',\n  'GamingGuru',\n  'PixelPrincess',\n  'NerdyNinja',\n  'TechTitan',\n  'CyberCommander',\n  'RetroRenegade',\n  'StreamSiren',\n  'GeekGoddess',\n  'CodeCrusader',\n  'GamerGodd',\n  'CosplayCraze',\n  'ArcadeAce',\n  'GameGoblin',\n  'VRVixen',\n  'PixelPirate',\n  'DungeonMaster',\n  'CyberSamurai',\n  'GamingGenius',\n  'GameChanger',\n  'PixelPaladin',\n  'DigitalDiva',\n  'StreamSavant',\n  'GamingGladiator',\n  'CodeConqueror'\n];\n",
+      "start": 1683869513915,
+      "end": 1683869513915
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const usernames = [\n  \"LilithTheDevil\",\n  \"GamingGuru\",\n  \"PixelPrincess\",\n  \"NerdyNinja\",\n  \"TechTitan\",\n  \"CyberCommander\",\n  \"RetroRenegade\",\n  \"StreamSiren\",\n  \"GeekGoddess\",\n  \"CodeCrusader\",\n  \"GamerGodd\",\n  \"CosplayCraze\",\n  \"ArcadeAce\",\n  \"GameGoblin\",\n  \"VRVixen\",\n  \"PixelPirate\",\n  \"DungeonMaster\",\n  \"CyberSamurai\",\n  \"GamingGenius\",\n  \"GameChanger\",\n  \"PixelPaladin\",\n  \"DigitalDiva\",\n  \"StreamSavant\",\n  \"GamingGladiator\",\n  \"CodeConqueror\"\n];\n",
+      "start": 1683869513915,
+      "end": 1683869513917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export const usernames = [\n  \"LilithTheDevil\",\n  \"GamingGuru\",\n  \"PixelPrincess\",\n  \"NerdyNinja\",\n  \"TechTitan\",\n  \"CyberCommander\",\n  \"RetroRenegade\",\n  \"StreamSiren\",\n  \"GeekGoddess\",\n  \"CodeCrusader\",\n  \"GamerGodd\",\n  \"CosplayCraze\",\n  \"ArcadeAce\",\n  \"GameGoblin\",\n  \"VRVixen\",\n  \"PixelPirate\",\n  \"DungeonMaster\",\n  \"CyberSamurai\",\n  \"GamingGenius\",\n  \"GameChanger\",\n  \"PixelPaladin\",\n  \"DigitalDiva\",\n  \"StreamSavant\",\n  \"GamingGladiator\",\n  \"CodeConqueror\"\n];\n",
+      "start": 1683869513917,
+      "end": 1683869513917,
+      "order": "normal"
+    }
+  ]
+}
