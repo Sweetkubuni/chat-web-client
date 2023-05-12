@@ -3,6 +3,7 @@ import ChatBody, { ListElem, MessageType } from "./ChatBody";
 import ChatFooter from "./ChatFooter";
 import "./ChatWindow.css";
 import { usernames } from '../testdata/data.js';
+import 'dotenv/config'
 
 enum Command {
   SUBSCRIBE = 0,
@@ -105,8 +106,11 @@ export default function ChatWindow() {
   };
 
   onMount(async () => {
+    let WEBSOCKET_URL : string = process.env.WEBSOCKET_URL!;
+    let fullURL : string = `ws://` + WEBSOCKET_URL +`/chat?username=${username}`;
+    console.debug('connecting to ' + fullURL);
     // Create WebSocket connection.
-    socket = new WebSocket(`ws://localhost:6000/chat?username=${username}`);
+    socket = new WebSocket(fullURL);
 
 
     // Connection opened

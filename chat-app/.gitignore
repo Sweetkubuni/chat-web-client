@@ -6,8 +6,19 @@ dist
 .netlify
 netlify
 
+# Logs
+logs
+*.log
+npm-debug.log*
+
 # dependencies
 /node_modules
+**/node_modules/**
+_node_modules
+.pnp.cjs
+package-lock.json
+yarn.lock
+node_modules
 
 # IDEs and editors
 /.idea
