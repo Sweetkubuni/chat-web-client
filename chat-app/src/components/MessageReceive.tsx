@@ -8,8 +8,8 @@ export default function MessageReceive(props: MessageArg) {
     <>
 			  <li class="message received">
 				<div class="message-content">
-				  <div class="message-sender">props.username</div>
-				  <div class="message-text">props.content</div>
+				  <div class="message-sender">{props.username}</div>
+				  <div class="message-text">{props.content}</div>
 				</div>
 			  </li>
     </>
