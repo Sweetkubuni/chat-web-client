@@ -6,8 +6,8 @@
     height: 100vh;
   }
   
-  .chat-window {
-    width: 350px;
+  .video-window {
+    width: 1000px;
     height: 600px;
     border: 2px dashed #ccc;
     border-radius: 10px;

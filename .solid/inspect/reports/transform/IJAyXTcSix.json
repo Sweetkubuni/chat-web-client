@@ -1,0 +1,32 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/src/routes/index.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { Title } from \"solid-start\";\r\nimport ChatWindow from \"~/components/ChatWindow\";\r\nimport VideoWindow from \"~/components/VideoWindow\";\r\nimport Counter from \"~/components/Counter\";\r\n\r\nexport default function Home() {\r\n  return (\r\n    <main class=\"flex\" >\r\n        <VideoWindow/>\r\n        <ChatWindow/>\r\n    </main>\r\n  );\r\n}\r\n",
+      "start": 1684209953425,
+      "end": 1684209953425
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main class=\"flex\"><!#><!/><!#><!/>`);\nimport ChatWindow from \"~/components/ChatWindow\";\nimport VideoWindow from \"~/components/VideoWindow\";\nexport default function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$2 = _el$.firstChild,\n      [_el$3, _co$] = _$getNextMarker(_el$2.nextSibling),\n      _el$4 = _el$3.nextSibling,\n      [_el$5, _co$2] = _$getNextMarker(_el$4.nextSibling);\n    _$insert(_el$, _$createComponent(VideoWindow, {}), _el$3, _co$);\n    _$insert(_el$, _$createComponent(ChatWindow, {}), _el$5, _co$2);\n    return _el$;\n  })();\n}",
+      "start": 1684209953425,
+      "end": 1684209953447,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { $$component as _$$component } from \"solid-refresh\";\nimport { $$refresh as _$$refresh } from \"solid-refresh\";\nimport { $$registry as _$$registry } from \"solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main class=\"flex\"><!#><!/><!#><!/>`);\nimport ChatWindow from \"~/components/ChatWindow\";\nimport VideoWindow from \"~/components/VideoWindow\";\nexport default _$$component(_REGISTRY, \"Home\", function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$2 = _el$.firstChild,\n      [_el$3, _co$] = _$getNextMarker(_el$2.nextSibling),\n      _el$4 = _el$3.nextSibling,\n      [_el$5, _co$2] = _$getNextMarker(_el$4.nextSibling);\n    _$insert(_el$, _$createComponent(VideoWindow, {}), _el$3, _co$);\n    _$insert(_el$, _$createComponent(ChatWindow, {}), _el$5, _co$2);\n    return _el$;\n  })();\n}, {\n  location: \"src\\\\routes\\\\index.tsx:9:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1684209953447,
+      "end": 1684209953473,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/index.tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main class=\"flex\"><!#><!/><!#><!/>`);\nimport ChatWindow from \"/src/components/ChatWindow.tsx?t=1684207160900\";\nimport VideoWindow from \"/src/components/VideoWindow.tsx?t=1684207182813\";\nexport default _$$component(_REGISTRY, \"Home\", function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$2 = _el$.firstChild,\n      [_el$3, _co$] = _$getNextMarker(_el$2.nextSibling),\n      _el$4 = _el$3.nextSibling,\n      [_el$5, _co$2] = _$getNextMarker(_el$4.nextSibling);\n    _$insert(_el$, _$createComponent(VideoWindow, {}), _el$3, _co$);\n    _$insert(_el$, _$createComponent(ChatWindow, {}), _el$5, _co$2);\n    return _el$;\n  })();\n}, {\n  location: \"src\\\\routes\\\\index.tsx:9:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1684209953473,
+      "end": 1684209953481,
+      "order": "normal"
+    }
+  ]
+}

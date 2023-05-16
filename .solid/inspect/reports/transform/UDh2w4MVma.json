@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/node_modules/solid-start/error-boundary/index.tsx?v=f9cc9616",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
+      "start": 1684204347787,
+      "end": 1684204347787
+    },
+    {
+      "name": "solid",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1684204347787,
+      "end": 1684204347794,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=f9cc9616\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=f9cc9616\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1684204347794,
+      "end": 1684204347797,
+      "order": "normal"
+    }
+  ]
+}

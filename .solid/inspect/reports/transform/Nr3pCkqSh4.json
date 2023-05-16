@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/src/entry-client.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { mount, StartClient } from \"solid-start/entry-client\";\r\n\r\nmount(() => <StartClient />, document);\r\n",
+      "start": 1684209956651,
+      "end": 1684209956651
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { mount, StartClient } from \"solid-start/entry-client\";\nmount(() => _$createComponent(StartClient, {}), document);",
+      "start": 1684209956651,
+      "end": 1684209956660,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=f9cc9616\";\nimport { mount, StartClient } from \"/node_modules/solid-start/entry-client/index.tsx?t=1684209953417&v=f9cc9616\";\nmount(() => _$createComponent(StartClient, {}), document);",
+      "start": 1684209956660,
+      "end": 1684209956664,
+      "order": "normal"
+    }
+  ]
+}

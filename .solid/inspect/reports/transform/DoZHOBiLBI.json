@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/node_modules/@solidjs/router/dist/index.jsx?v=f9cc9616",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave, } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";\n",
+      "start": 1684204347668,
+      "end": 1684204347668
+    },
+    {
+      "name": "solid",
+      "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
+      "start": 1684204347668,
+      "end": 1684204347672,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export * from \"/node_modules/@solidjs/router/dist/components.jsx?v=f9cc9616\";\nexport * from \"/node_modules/@solidjs/router/dist/integration.js?v=f9cc9616\";\nexport * from \"/node_modules/@solidjs/router/dist/lifecycle.js?v=f9cc9616\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"/node_modules/@solidjs/router/dist/routing.js?v=f9cc9616\";\nexport { mergeSearchString as _mergeSearchString } from \"/node_modules/@solidjs/router/dist/utils.js?v=f9cc9616\";",
+      "start": 1684204347672,
+      "end": 1684204347677,
+      "order": "normal"
+    }
+  ]
+}

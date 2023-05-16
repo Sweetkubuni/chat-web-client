@@ -1,7 +1,7 @@
 import { createSignal, onMount } from "solid-js";
 import ChatBody, { ListElem, MessageType } from "./ChatBody";
 import ChatFooter from "./ChatFooter";
-import "./ChatWindow.css";
+import "./VideoWindow.css";
 import { usernames } from '../testdata/data.js';
 import LiveKitHelper from "../helper/LiveKitHelper";
 
@@ -129,37 +129,37 @@ export default function ChatWindow() {
   onMount(async () => {
 
     // Instantiate the LiveKitHelper with the server URL, API key, and API secret
-    livekitHelper = new LiveKitHelper('ws://localhost:7880', 'devkey', 'secret');
+    // livekitHelper = new LiveKitHelper('ws://localhost:7880', 'devkey', 'secret');
 
-    // Connect to a room
-    const roomName = 'my-first-room';
-    const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTY2MDQxNTksImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NDIwNDE1OSwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.ZQExQ1D78L7sBNrFjkQzZ7RJwhslMAXjPSloxgdyg2g';
+    // // Connect to a room
+    // const roomName = 'my-first-room';
+    // const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTY2MDQxNTksImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NDIwNDE1OSwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.ZQExQ1D78L7sBNrFjkQzZ7RJwhslMAXjPSloxgdyg2g';
 
-    livekitHelper.connectToRoom('ws://localhost:7880', accessToken)
-      .then(room => {
-        // Perform actions in the room
-        console.log('Connected to room:', roomName);
+    // livekitHelper.connectToRoom('ws://localhost:7880', accessToken)
+    //   .then(room => {
+    //     // Perform actions in the room
+    //     console.log('Connected to room:', roomName);
 
-        // Listen to participant events
-        room.on('participantConnected', participant => {
-          console.log(`Participant connected: ${participant.identity}`);
-        });
-        room.on('dataReceived', (msg: string, participant?: RemoteParticipant ) => {
-          handleData(msg, participant);
-      })
+    //     // Listen to participant events
+    //     room.on('participantConnected', participant => {
+    //       console.log(`Participant connected: ${participant.identity}`);
+    //     });
+    //     room.on('dataReceived', (msg: string, participant?: RemoteParticipant ) => {
+    //       handleData(msg, participant);
+    //   })
 
-        room.on('participantDisconnected', participant => {
-          console.log(`Participant disconnected: ${participant.identity}`);
-        });
+    //     room.on('participantDisconnected', participant => {
+    //       console.log(`Participant disconnected: ${participant.identity}`);
+    //     });
 
-        // Disconnect from the room after some time
-        setTimeout(() => {
-          // livekitHelper.disconnectFromRoom();
-        }, 5000);
-      })
-      .catch(error => {
-        console.error('Error connecting to room:', error);
-      });
+    //     // Disconnect from the room after some time
+    //     setTimeout(() => {
+    //       // livekitHelper.disconnectFromRoom();
+    //     }, 5000);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error connecting to room:', error);
+    //   });
 
 
 
@@ -287,13 +287,13 @@ export default function ChatWindow() {
 
   return (
     <div class="container">
-      {/* <div class="video-container">
+      <div class="video-window">
         <video id="video-element" class="grid-style" controls></video>
-      </div> */}
-      <div class="chat-window">
+      </div>
+      {/* <div class="chat-window">
         <ChatBody msgs={messages} containerRef={containerRef} />
         <ChatFooter sendMessage={sendMessage} />
-      </div>
+      </div> */}
     </div>
   );
 }
