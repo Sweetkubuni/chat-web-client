@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/error-boundary/index.tsx?v=b6bf6f41",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
+      "start": 1683938701361,
+      "end": 1683938701361
+    },
+    {
+      "name": "solid",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1683938701361,
+      "end": 1683938701366,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=b6bf6f41\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=b6bf6f41\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1683938701367,
+      "end": 1683938701369,
+      "order": "normal"
+    }
+  ]
+}

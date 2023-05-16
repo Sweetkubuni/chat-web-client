@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/server/data.ts?v=b6bf6f41",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
+      "start": 1683938702411,
+      "end": 1683938702411
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
+      "start": 1683938702411,
+      "end": 1683938702415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"/node_modules/solid-start/data/index.ts?v=b6bf6f41\";\nexport { ServerError } from \"/node_modules/solid-start/data/index.ts?v=b6bf6f41\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
+      "start": 1683938702415,
+      "end": 1683938702417,
+      "order": "normal"
+    }
+  ]
+}

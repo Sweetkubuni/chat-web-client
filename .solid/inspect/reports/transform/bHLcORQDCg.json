@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/testdata/data.ts",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "\r\n\r\nexport const usernames: string[] = [\r\n  'LilithTheDevil',\r\n  'GamingGuru',\r\n  'PixelPrincess',\r\n  'NerdyNinja',\r\n  'TechTitan',\r\n  'CyberCommander',\r\n  'RetroRenegade',\r\n  'StreamSiren',\r\n  'GeekGoddess',\r\n  'CodeCrusader',\r\n  'GamerGodd',\r\n  'CosplayCraze',\r\n  'ArcadeAce',\r\n  'GameGoblin',\r\n  'VRVixen',\r\n  'PixelPirate',\r\n  'DungeonMaster',\r\n  'CyberSamurai',\r\n  'GamingGenius',\r\n  'GameChanger',\r\n  'PixelPaladin',\r\n  'DigitalDiva',\r\n  'StreamSavant',\r\n  'GamingGladiator',\r\n  'CodeConqueror'\r\n];\r\n",
+      "start": 1683938701852,
+      "end": 1683938701852
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const usernames = [\n  \"LilithTheDevil\",\n  \"GamingGuru\",\n  \"PixelPrincess\",\n  \"NerdyNinja\",\n  \"TechTitan\",\n  \"CyberCommander\",\n  \"RetroRenegade\",\n  \"StreamSiren\",\n  \"GeekGoddess\",\n  \"CodeCrusader\",\n  \"GamerGodd\",\n  \"CosplayCraze\",\n  \"ArcadeAce\",\n  \"GameGoblin\",\n  \"VRVixen\",\n  \"PixelPirate\",\n  \"DungeonMaster\",\n  \"CyberSamurai\",\n  \"GamingGenius\",\n  \"GameChanger\",\n  \"PixelPaladin\",\n  \"DigitalDiva\",\n  \"StreamSavant\",\n  \"GamingGladiator\",\n  \"CodeConqueror\"\n];\n",
+      "start": 1683938701852,
+      "end": 1683938701854,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export const usernames = [\n  \"LilithTheDevil\",\n  \"GamingGuru\",\n  \"PixelPrincess\",\n  \"NerdyNinja\",\n  \"TechTitan\",\n  \"CyberCommander\",\n  \"RetroRenegade\",\n  \"StreamSiren\",\n  \"GeekGoddess\",\n  \"CodeCrusader\",\n  \"GamerGodd\",\n  \"CosplayCraze\",\n  \"ArcadeAce\",\n  \"GameGoblin\",\n  \"VRVixen\",\n  \"PixelPirate\",\n  \"DungeonMaster\",\n  \"CyberSamurai\",\n  \"GamingGenius\",\n  \"GameChanger\",\n  \"PixelPaladin\",\n  \"DigitalDiva\",\n  \"StreamSavant\",\n  \"GamingGladiator\",\n  \"CodeConqueror\"\n];\n",
+      "start": 1683938701854,
+      "end": 1683938701854,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/server/shared.ts?v=b6bf6f41",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n\n",
+      "start": 1683938702374,
+      "end": 1683938702374
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n",
+      "start": 1683938702374,
+      "end": 1683938702376,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { HttpHeader } from \"/node_modules/solid-start/server/components/HttpHeader.tsx?v=b6bf6f41\";\nexport { HttpStatusCode } from \"/node_modules/solid-start/server/components/HttpStatusCode.tsx?v=b6bf6f41\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"/node_modules/solid-start/server/data.ts?v=b6bf6f41\";\nexport * from \"/node_modules/solid-start/server/responses.ts?v=b6bf6f41\";\nexport * from \"/node_modules/solid-start/server/ServerContext.tsx?v=b6bf6f41\";\nexport * from \"/node_modules/solid-start/server/types.tsx?v=b6bf6f41\";\n",
+      "start": 1683938702376,
+      "end": 1683938702380,
+      "order": "normal"
+    }
+  ]
+}

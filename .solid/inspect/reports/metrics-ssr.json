@@ -5,7 +5,7 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 4,
+      "invokeCount": 1,
       "totalTime": 1
     },
     "name": "alias"
@@ -13,7 +13,7 @@
   {
     "transform": {
       "invokeCount": 26,
-      "totalTime": 819
+      "totalTime": 576
     },
     "resolveId": {
       "invokeCount": 0,
@@ -48,7 +48,7 @@
   {
     "transform": {
       "invokeCount": 3,
-      "totalTime": 0
+      "totalTime": 2
     },
     "resolveId": {
       "invokeCount": 0,
@@ -171,7 +171,7 @@
   {
     "transform": {
       "invokeCount": 18,
-      "totalTime": 568
+      "totalTime": 1154
     },
     "resolveId": {
       "invokeCount": 0,
@@ -193,7 +193,7 @@
   {
     "transform": {
       "invokeCount": 48,
-      "totalTime": 151
+      "totalTime": 121
     },
     "resolveId": {
       "invokeCount": 0,
@@ -204,7 +204,7 @@
   {
     "transform": {
       "invokeCount": 1,
-      "totalTime": 14
+      "totalTime": 73
     },
     "resolveId": {
       "invokeCount": 0,
@@ -262,8 +262,8 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 495,
-      "totalTime": 107
+      "invokeCount": 242,
+      "totalTime": 608
     },
     "name": "vite:resolve"
   },
@@ -288,6 +288,17 @@
       "totalTime": 0
     },
     "name": "vite:wasm-helper"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:watch-package-data"
   },
   {
     "transform": {

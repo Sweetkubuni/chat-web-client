@@ -1,0 +1,32 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/data/index.ts",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport type { FormAction, FormMethod, FormProps, SubmitOptions } from \"./Form\";\nexport { FormError, ServerError } from \"./FormError\";\n\n",
+      "start": 1683938700629,
+      "end": 1683938700629
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport { FormError, ServerError } from \"./FormError\";\n",
+      "start": 1683938700629,
+      "end": 1683938700730,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport { FormError, ServerError } from \"./FormError\";\n",
+      "start": 1683938700730,
+      "end": 1683938700731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { useRouteData } from \"/node_modules/@solidjs/router/dist/index.jsx\";\nexport { createRouteAction, createRouteMultiAction } from \"/node_modules/solid-start/data/createRouteAction.tsx\";\nexport { createRouteData, refetchRouteData } from \"/node_modules/solid-start/data/createRouteData.tsx\";\nexport { FormError, ServerError } from \"/node_modules/solid-start/data/FormError.tsx\";\n",
+      "start": 1683938700731,
+      "end": 1683938700734,
+      "order": "normal"
+    }
+  ]
+}

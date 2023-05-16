@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/entry-client/index.tsx?v=b6bf6f41",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export { default as mount } from \"./mount\";\nexport { default as StartClient } from \"./StartClient\";\n",
+      "start": 1683938701146,
+      "end": 1683938701146
+    },
+    {
+      "name": "solid",
+      "result": "export { default as mount } from \"./mount\";\nexport { default as StartClient } from \"./StartClient\";",
+      "start": 1683938701146,
+      "end": 1683938701151,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { default as mount } from \"/node_modules/solid-start/entry-client/mount.tsx?v=b6bf6f41\";\nexport { default as StartClient } from \"/node_modules/solid-start/entry-client/StartClient.tsx?v=b6bf6f41\";",
+      "start": 1683938701152,
+      "end": 1683938701155,
+      "order": "normal"
+    }
+  ]
+}

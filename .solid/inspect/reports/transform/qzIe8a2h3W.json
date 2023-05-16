@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/server/components/HttpStatusCode.tsx?v=b6bf6f41",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpStatusCode(props: { code: number }) {\n  const context = useContext(ServerContext);\n\n  if (isServer) {\n    context!.setStatusCode(props.code);\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      context!.setStatusCode(200);\n    }\n  });\n\n  return null;\n}\n",
+      "start": 1683938702397,
+      "end": 1683938702397
+    },
+    {
+      "name": "solid",
+      "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
+      "start": 1683938702397,
+      "end": 1683938702403,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { onCleanup, useContext } from \"/node_modules/.vite/deps/solid-js.js?v=7ceab6b0\";\nimport { isServer } from \"/node_modules/.vite/deps/solid-js_web.js?v=7ceab6b0\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx?v=b6bf6f41\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
+      "start": 1683938702403,
+      "end": 1683938702404,
+      "order": "normal"
+    }
+  ]
+}
