@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
   }
   
   .video-window {
-    width: 1000px;
-    height: 600px;
+    width: 1280px;
+    height: 650px;
     border: 2px dashed #ccc;
     border-radius: 10px;
     overflow: hidden;
