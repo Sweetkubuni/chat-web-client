@@ -133,7 +133,7 @@ export default function ChatWindow() {
 
     // // Connect to a room
     // const roomName = 'my-first-room';
-    // const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTY2MDQxNTksImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NDIwNDE1OSwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.ZQExQ1D78L7sBNrFjkQzZ7RJwhslMAXjPSloxgdyg2g';
+    // const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc0MDM3MDUsImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NDE2MzcwNSwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.l-VATsEHCf6EUwbUayeuiZbDPZaAQpNhzMZyixZJVn4';
 
     // livekitHelper.connectToRoom('ws://localhost:7880', accessToken)
     //   .then(room => {

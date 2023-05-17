@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/root.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "// @refresh reload\r\nimport { Suspense } from \"solid-js\";\r\nimport LiveKitHelper from \"./helper/LiveKitHelper\";\r\nimport {\r\n  A,\r\n  Body,\r\n  ErrorBoundary,\r\n  FileRoutes,\r\n  Head,\r\n  Html,\r\n  Meta,\r\n  Routes,\r\n  Scripts,\r\n  Title,\r\n} from \"solid-start\";\r\nimport \"./root.css\";\r\n\r\n\r\nexport default function Root() {\r\n  return (\r\n    <Html lang=\"en\">\r\n      <Head>\r\n        <Title>Demo Chat</Title>\r\n        <Meta charset=\"utf-8\" />\r\n        <Meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n        <Meta name=\"description\" content=\"Demo Web Chat\" />\r\n      </Head>\r\n      <Body>\r\n        <Suspense>\r\n          <ErrorBoundary>\r\n            {/* <A href=\"/\">Index</A>\r\n            <A href=\"/about\">About</A> */}\r\n            <Routes>\r\n              <FileRoutes />\r\n            </Routes>\r\n          </ErrorBoundary>\r\n        </Suspense>\r\n        <Scripts />\r\n      </Body>\r\n    </Html>\r\n  );\r\n}\r\n",
+      "start": 1684336697645,
+      "end": 1684336697645
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { $$decline as _$$decline } from \"solid-refresh\";\n// @refresh reload\nimport { Suspense } from \"solid-js\";\nimport FileRoutes from \"solid-start/root/FileRoutes\";\nimport { Body, ErrorBoundary, Head, Html, Meta, Routes, Scripts, Title } from \"solid-start\";\nimport \"./root.css\";\nexport default function Root() {\n  return _$createComponent(Html, {\n    lang: \"en\",\n    get children() {\n      return [_$createComponent(Head, {\n        get children() {\n          return [_$createComponent(Title, {\n            children: \"Demo Chat\"\n          }), _$createComponent(Meta, {\n            charset: \"utf-8\"\n          }), _$createComponent(Meta, {\n            name: \"viewport\",\n            content: \"width=device-width, initial-scale=1\"\n          }), _$createComponent(Meta, {\n            name: \"description\",\n            content: \"Demo Web Chat\"\n          })];\n        }\n      }), _$createComponent(Body, {\n        get children() {\n          return [_$createComponent(Suspense, {\n            get children() {\n              return _$createComponent(ErrorBoundary, {\n                get children() {\n                  return _$createComponent(Routes, {\n                    get children() {\n                      return _$createComponent(FileRoutes, {});\n                    }\n                  });\n                }\n              });\n            }\n          }), _$createComponent(Scripts, {})];\n        }\n      })];\n    }\n  });\n}\nif (import.meta.hot) {\n  _$$decline(\"vite\", import.meta.hot);\n  import.meta.hot.accept();\n}",
+      "start": 1684336697645,
+      "end": 1684336697665,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/root.tsx\");import { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=4d3f1fbc\";\nimport { $$decline as _$$decline } from \"/@solid-refresh\";\n// @refresh reload\nimport { Suspense } from \"/node_modules/.vite/deps/solid-js.js?v=4d3f1fbc\";\nimport FileRoutes from \"/node_modules/solid-start/root/FileRoutes.tsx?t=1684335465559&v=4d3f1fbc\";\nimport { Body, ErrorBoundary, Head, Html, Meta, Routes, Scripts, Title } from \"/node_modules/solid-start/index.tsx?v=4d3f1fbc\";\nimport \"/src/root.css\";\nexport default function Root() {\n  return _$createComponent(Html, {\n    lang: \"en\",\n    get children() {\n      return [_$createComponent(Head, {\n        get children() {\n          return [_$createComponent(Title, {\n            children: \"Demo Chat\"\n          }), _$createComponent(Meta, {\n            charset: \"utf-8\"\n          }), _$createComponent(Meta, {\n            name: \"viewport\",\n            content: \"width=device-width, initial-scale=1\"\n          }), _$createComponent(Meta, {\n            name: \"description\",\n            content: \"Demo Web Chat\"\n          })];\n        }\n      }), _$createComponent(Body, {\n        get children() {\n          return [_$createComponent(Suspense, {\n            get children() {\n              return _$createComponent(ErrorBoundary, {\n                get children() {\n                  return _$createComponent(Routes, {\n                    get children() {\n                      return _$createComponent(FileRoutes, {});\n                    }\n                  });\n                }\n              });\n            }\n          }), _$createComponent(Scripts, {})];\n        }\n      })];\n    }\n  });\n}\nif (import.meta.hot) {\n  _$$decline(\"vite\", import.meta.hot);\n  import.meta.hot.accept();\n}",
+      "start": 1684336697665,
+      "end": 1684336697667,
+      "order": "normal"
+    }
+  ]
+}

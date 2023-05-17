@@ -1,15 +1,35 @@
 import {
+  ConnectionQuality,
+  ConnectionState,
+  DisconnectReason,
+  LocalAudioTrack,
+  LocalParticipant,
+  LogLevel,
+  MediaDeviceFailure,
   Participant,
+  ParticipantEvent,
   RemoteParticipant,
-  RemoteTrack,
   RemoteTrackPublication,
+  RemoteVideoTrack,
   Room,
-  Track,
+  RoomConnectOptions,
   RoomEvent,
-  VideoPresets
+  RoomOptions,
+  Track,
+  TrackPublication,
+  VideoCaptureOptions,
+  VideoCodec,
+  VideoPresets,
+  VideoQuality,
+  createAudioAnalyser,
+  setLogLevel,
+  supportsAV1,
+  supportsVP9,
 } from 'livekit-client';
 
 let currentRoom: Room | undefined;
+const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+let startTime: number;
 
 const state = {
   isFrontFacing: false,
@@ -72,14 +92,14 @@ class LiveKitHelper {
     // }
     const room = new Room(roomOpts);
 
-    // startTime = Date.now();
+    startTime = Date.now();
     await room.prepareConnection(url);
     // const prewarmTime = Date.now() - startTime;
     // console.log(`prewarmed connection in ${prewarmTime}ms`);
 
     room
-      // .on(RoomEvent.ParticipantConnected, participantConnected)
-      // .on(RoomEvent.ParticipantDisconnected, participantDisconnected)
+      .on(RoomEvent.ParticipantConnected, this.participantConnected)
+      .on(RoomEvent.ParticipantDisconnected, this.participantDisconnected)
       // .on(RoomEvent.DataReceived, this.handleData)
       // .on(RoomEvent.Disconnected, handleRoomDisconnect)
       .on(RoomEvent.TrackSubscribed, this.handleTrackSubscribed)
@@ -103,7 +123,7 @@ class LiveKitHelper {
         //     $('local-volume')?.setAttribute('value', calculateVolume().toFixed(4));
         //   }, 200);
         // }
-        // renderParticipant(room.localParticipant);
+        this.renderParticipant(room.localParticipant);
         // updateButtonsForPublishState();
         // renderScreenShare(room);
       })
@@ -135,12 +155,12 @@ class LiveKitHelper {
       )
       .on(RoomEvent.TrackSubscribed, (track, pub, participant) => {
         // console.log('subscribed to track', pub.trackSid, participant.identity);
-        // renderParticipant(participant);
+        this.renderParticipant(participant);
         // renderScreenShare(room);
       })
       .on(RoomEvent.TrackUnsubscribed, (_, pub, participant) => {
         // console.log('unsubscribed from track', pub.trackSid);
-        // renderParticipant(participant);
+        this.renderParticipant(participant);
         // renderScreenShare(room);
       })
       .on(RoomEvent.SignalConnected, async () => {
@@ -247,14 +267,17 @@ class LiveKitHelper {
     // updateButtonsForPublishState();
   }
 
+  updateVideoSize(element: HTMLVideoElement, target: HTMLElement) {
+    target.innerHTML = `(${element.videoWidth}x${element.videoHeight})`;
+  }
+
   // updates participant UI
   renderParticipant(participant: Participant, remove: boolean = false) {
-    // const container = $('participants-area');
-    // if (!container) return;
+    const container = $('participants-area');
+    if (!container) return;
     const { identity } = participant;
     let div = $(`participant-${identity}`);
-    // if (!div && !remove) 
-    {
+    if (!div && !remove) {
       div = document.createElement('div');
       div.id = `participant-${identity}`;
       div.className = 'participant';
@@ -285,102 +308,102 @@ class LiveKitHelper {
         }
 
     `;
-      document.appendChild(div);
+      document.body.appendChild(div);
 
       const sizeElm = $(`size-${identity}`);
       const videoElm = <HTMLVideoElement>$(`video-${identity}`);
-      // videoElm.onresize = () => {
-      //   updateVideoSize(videoElm!, sizeElm!);
-      // };
+      videoElm.onresize = () => {
+        this.updateVideoSize(videoElm!, sizeElm!);
+      };
     }
-    // const videoElm = <HTMLVideoElement>$(`video-${identity}`);
-    // const audioELm = <HTMLAudioElement>$(`audio-${identity}`);
-    // if (remove) {
-    //   div?.remove();
-    //   if (videoElm) {
-    //     videoElm.srcObject = null;
-    //     videoElm.src = '';
-    //   }
-    //   if (audioELm) {
-    //     audioELm.srcObject = null;
-    //     audioELm.src = '';
-    //   }
-    //   return;
-    // }
+    const videoElm = <HTMLVideoElement>$(`video-${identity}`);
+    const audioELm = <HTMLAudioElement>$(`audio-${identity}`);
+    if (remove) {
+      div?.remove();
+      if (videoElm) {
+        videoElm.srcObject = null;
+        videoElm.src = '';
+      }
+      if (audioELm) {
+        audioELm.srcObject = null;
+        audioELm.src = '';
+      }
+      return;
+    }
 
-    // // update properties
-    // $(`name-${identity}`)!.innerHTML = participant.identity;
-    // if (participant instanceof LocalParticipant) {
-    //   $(`name-${identity}`)!.innerHTML += ' (you)';
-    // }
-    // const micElm = $(`mic-${identity}`)!;
-    // const signalElm = $(`signal-${identity}`)!;
-    // const cameraPub = participant.getTrack(Track.Source.Camera);
-    // const micPub = participant.getTrack(Track.Source.Microphone);
-    // if (participant.isSpeaking) {
-    //   div!.classList.add('speaking');
-    // } else {
-    //   div!.classList.remove('speaking');
-    // }
+    // update properties
+    $(`name-${identity}`)!.innerHTML = participant.identity;
+    if (participant instanceof LocalParticipant) {
+      $(`name-${identity}`)!.innerHTML += ' (you)';
+    }
+    const micElm = $(`mic-${identity}`)!;
+    const signalElm = $(`signal-${identity}`)!;
+    const cameraPub = participant.getTrack(Track.Source.Camera);
+    const micPub = participant.getTrack(Track.Source.Microphone);
+    if (participant.isSpeaking) {
+      div!.classList.add('speaking');
+    } else {
+      div!.classList.remove('speaking');
+    }
 
-    // if (participant instanceof RemoteParticipant) {
-    //   const volumeSlider = <HTMLInputElement>$(`volume-${identity}`);
-    //   volumeSlider.addEventListener('input', (ev) => {
-    //     participant.setVolume(Number.parseFloat((ev.target as HTMLInputElement).value));
-    //   });
-    // }
+    if (participant instanceof RemoteParticipant) {
+      const volumeSlider = <HTMLInputElement>$(`volume-${identity}`);
+      volumeSlider.addEventListener('input', (ev) => {
+        participant.setVolume(Number.parseFloat((ev.target as HTMLInputElement).value));
+      });
+    }
 
-    // const cameraEnabled = cameraPub && cameraPub.isSubscribed && !cameraPub.isMuted;
-    // if (cameraEnabled) {
-    //   if (participant instanceof LocalParticipant) {
-    //     // flip
-    //     videoElm.style.transform = 'scale(-1, 1)';
-    //   } else if (!cameraPub?.videoTrack?.attachedElements.includes(videoElm)) {
-    //     const renderStartTime = Date.now();
-    //     // measure time to render
-    //     videoElm.onloadeddata = () => {
-    //       const elapsed = Date.now() - renderStartTime;
-    //       let fromJoin = 0;
-    //       if (participant.joinedAt && participant.joinedAt.getTime() < startTime) {
-    //         fromJoin = Date.now() - startTime;
-    //       }
-    //       appendLog(
-    //         `RemoteVideoTrack ${cameraPub?.trackSid} (${videoElm.videoWidth}x${videoElm.videoHeight}) rendered in ${elapsed}ms`,
-    //         fromJoin > 0 ? `, ${fromJoin}ms from start` : '',
-    //       );
-    //     };
-    //   }
-    //   cameraPub?.videoTrack?.attach(videoElm);
-    // } else {
-    //   // clear information display
-    //   $(`size-${identity}`)!.innerHTML = '';
-    //   if (cameraPub?.videoTrack) {
-    //     // detach manually whenever possible
-    //     cameraPub.videoTrack?.detach(videoElm);
-    //   } else {
-    //     videoElm.src = '';
-    //     videoElm.srcObject = null;
-    //   }
-    // }
+    const cameraEnabled = cameraPub && cameraPub.isSubscribed && !cameraPub.isMuted;
+    if (cameraEnabled) {
+      if (participant instanceof LocalParticipant) {
+        // flip
+        videoElm.style.transform = 'scale(-1, 1)';
+      } else if (!cameraPub?.videoTrack?.attachedElements.includes(videoElm)) {
+        const renderStartTime = Date.now();
+        // measure time to render
+        videoElm.onloadeddata = () => {
+          const elapsed = Date.now() - renderStartTime;
+          let fromJoin = 0;
+          if (participant.joinedAt && participant.joinedAt.getTime() < startTime) {
+            fromJoin = Date.now() - startTime;
+          }
+          // appendLog(
+          //   `RemoteVideoTrack ${cameraPub?.trackSid} (${videoElm.videoWidth}x${videoElm.videoHeight}) rendered in ${elapsed}ms`,
+          //   fromJoin > 0 ? `, ${fromJoin}ms from start` : '',
+          // );
+        };
+      }
+      cameraPub?.videoTrack?.attach(videoElm);
+    } else {
+      // clear information display
+      $(`size-${identity}`)!.innerHTML = '';
+      if (cameraPub?.videoTrack) {
+        // detach manually whenever possible
+        cameraPub.videoTrack?.detach(videoElm);
+      } else {
+        videoElm.src = '';
+        videoElm.srcObject = null;
+      }
+    }
 
-    // const micEnabled = micPub && micPub.isSubscribed && !micPub.isMuted;
-    // if (micEnabled) {
-    //   if (!(participant instanceof LocalParticipant)) {
-    //     // don't attach local audio
-    //     audioELm.onloadeddata = () => {
-    //       if (participant.joinedAt && participant.joinedAt.getTime() < startTime) {
-    //         const fromJoin = Date.now() - startTime;
-    //         appendLog(`RemoteAudioTrack ${micPub?.trackSid} played ${fromJoin}ms from start`);
-    //       }
-    //     };
-    //     micPub?.audioTrack?.attach(audioELm);
-    //   }
-    //   micElm.className = 'mic-on';
-    //   micElm.innerHTML = '<i class="fas fa-microphone"></i>';
-    // } else {
-    //   micElm.className = 'mic-off';
-    //   micElm.innerHTML = '<i class="fas fa-microphone-slash"></i>';
-    // }
+    const micEnabled = micPub && micPub.isSubscribed && !micPub.isMuted;
+    if (micEnabled) {
+      if (!(participant instanceof LocalParticipant)) {
+        // don't attach local audio
+        audioELm.onloadeddata = () => {
+          if (participant.joinedAt && participant.joinedAt.getTime() < startTime) {
+            const fromJoin = Date.now() - startTime;
+            // appendLog(`RemoteAudioTrack ${micPub?.trackSid} played ${fromJoin}ms from start`);
+          }
+        };
+        micPub?.audioTrack?.attach(audioELm);
+      }
+      micElm.className = 'mic-on';
+      micElm.innerHTML = '<i class="fas fa-microphone"></i>';
+    } else {
+      micElm.className = 'mic-off';
+      micElm.innerHTML = '<i class="fas fa-microphone-slash"></i>';
+    }
 
     // switch (participant.connectionQuality) {
     //   case ConnectionQuality.Excellent:
@@ -461,6 +484,26 @@ class LiveKitHelper {
 
   handleDisconnect() {
     console.log('disconnected from room');
+  }
+
+  participantConnected(participant: Participant) {
+    participant
+      .on(ParticipantEvent.TrackMuted, (pub: TrackPublication) => {
+        this.renderParticipant(participant);
+      })
+      .on(ParticipantEvent.TrackUnmuted, (pub: TrackPublication) => {
+        this.renderParticipant(participant);
+      })
+      .on(ParticipantEvent.IsSpeakingChanged, () => {
+        this.renderParticipant(participant);
+      })
+      .on(ParticipantEvent.ConnectionQualityChanged, () => {
+        this.renderParticipant(participant);
+      });
+  }
+  participantDisconnected(participant: RemoteParticipant) {
+
+    this.renderParticipant(participant, true);
   }
 }
 
