@@ -1,0 +1,32 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/src/routes/[...404].tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { Title } from \"solid-start\";\r\nimport { HttpStatusCode } from \"solid-start/server\";\r\n\r\nexport default function NotFound() {\r\n  return (\r\n    <main>\r\n      <Title>Not Found</Title>\r\n      <HttpStatusCode code={404} />\r\n      <h1>Page Not Found</h1>\r\n      <p>\r\n        Visit{\" \"}\r\n        <a href=\"https://start.solidjs.com\" target=\"_blank\">\r\n          start.solidjs.com\r\n        </a>{\" \"}\r\n        to learn how to build SolidStart apps.\r\n      </p>\r\n    </main>\r\n  );\r\n}\r\n",
+      "start": 1684314038606,
+      "end": 1684314038606
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!#><!/><!#><!/><h1>Page Not Found</h1><p>Visit <a href=\"https://start.solidjs.com\" target=\"_blank\">start.solidjs.com</a> to learn how to build SolidStart apps.`);\nimport { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\nexport default function NotFound() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$5 = _el$4.nextSibling,\n      [_el$6, _co$2] = _$getNextMarker(_el$5.nextSibling),\n      _el$2 = _el$6.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Not Found\"\n    }), _el$4, _co$);\n    _$insert(_el$, _$createComponent(HttpStatusCode, {\n      code: 404\n    }), _el$6, _co$2);\n    return _el$;\n  })();\n}",
+      "start": 1684314038606,
+      "end": 1684314038623,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { $$component as _$$component } from \"solid-refresh\";\nimport { $$refresh as _$$refresh } from \"solid-refresh\";\nimport { $$registry as _$$registry } from \"solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!#><!/><!#><!/><h1>Page Not Found</h1><p>Visit <a href=\"https://start.solidjs.com\" target=\"_blank\">start.solidjs.com</a> to learn how to build SolidStart apps.`);\nimport { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\nexport default _$$component(_REGISTRY, \"NotFound\", function NotFound() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$5 = _el$4.nextSibling,\n      [_el$6, _co$2] = _$getNextMarker(_el$5.nextSibling),\n      _el$2 = _el$6.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Not Found\"\n    }), _el$4, _co$);\n    _$insert(_el$, _$createComponent(HttpStatusCode, {\n      code: 404\n    }), _el$6, _co$2);\n    return _el$;\n  })();\n}, {\n  location: \"src\\\\routes\\\\[...404].tsx:9:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1684314038623,
+      "end": 1684314038637,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/[...404].tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=1bb8a96b\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=1bb8a96b\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=1bb8a96b\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=1bb8a96b\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=1bb8a96b\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!#><!/><!#><!/><h1>Page Not Found</h1><p>Visit <a href=\"https://start.solidjs.com\" target=\"_blank\">start.solidjs.com</a> to learn how to build SolidStart apps.`);\nimport { Title } from \"/node_modules/solid-start/index.tsx?v=298473de\";\nimport { HttpStatusCode } from \"/node_modules/solid-start/server/browser.ts?v=298473de\";\nexport default _$$component(_REGISTRY, \"NotFound\", function NotFound() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$5 = _el$4.nextSibling,\n      [_el$6, _co$2] = _$getNextMarker(_el$5.nextSibling),\n      _el$2 = _el$6.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Not Found\"\n    }), _el$4, _co$);\n    _$insert(_el$, _$createComponent(HttpStatusCode, {\n      code: 404\n    }), _el$6, _co$2);\n    return _el$;\n  })();\n}, {\n  location: \"src\\\\routes\\\\[...404].tsx:9:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1684314038637,
+      "end": 1684314038639,
+      "order": "normal"
+    }
+  ]
+}

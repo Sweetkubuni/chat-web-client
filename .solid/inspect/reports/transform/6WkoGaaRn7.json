@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/quan.doan/Documents/GitHub/chat-web-client/node_modules/solid-start/server/browser.ts?v=298473de",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export { server$ as default } from \"./server-functions/browser\";\nexport * from \"./shared\";\n\nexport const isServerFunctionRequest = () => {\n  throw new Error(\"isServerFunctionRequest is not supported on the browser\");\n};\n\n\n",
+      "start": 1684314038644,
+      "end": 1684314038644
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export { server$ as default } from \"./server-functions/browser\";\nexport * from \"./shared\";\nexport const isServerFunctionRequest = () => {\n  throw new Error(\"isServerFunctionRequest is not supported on the browser\");\n};\n",
+      "start": 1684314038644,
+      "end": 1684314038649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { server$ as default } from \"/node_modules/solid-start/server/server-functions/browser.ts?v=298473de\";\nexport * from \"/node_modules/solid-start/server/shared.ts?v=298473de\";\nexport const isServerFunctionRequest = () => {\n  throw new Error(\"isServerFunctionRequest is not supported on the browser\");\n};\n",
+      "start": 1684314038649,
+      "end": 1684314038654,
+      "order": "normal"
+    }
+  ]
+}
