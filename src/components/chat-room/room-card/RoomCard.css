@@ -1,0 +1,21 @@
+.room-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+.room-card-thumbnail {
+    width: 100%;
+    max-width: 300px;
+    min-height: 150px;
+    height: auto;
+    background: #d9d9d9;
+    border-radius: 8px;
+}
+
+.room-card-title {
+    font-size: 20px;
+    color: #FFF;
+}
