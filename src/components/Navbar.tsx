@@ -4,6 +4,7 @@ import ChatFooter from "./ChatFooter";
 import "./Navbar.css";
 import { usernames } from '../testdata/data.js';
 // import LiveKitHelper from "../helper/LiveKitHelper";
+import Avatar from "~/images/img_avatar.png";
 
 enum Command {
   SUBSCRIBE = 0,
@@ -292,7 +293,9 @@ export default function ChatWindow() {
       </div> */}
       {/* <div class="chat-window"> */}
         {/* <div class="chat-window"> */}
-          Sign up
+        <div class="avatar-pic">
+          <img class="avatar" src={Avatar} />
+        </div>
         {/* </div> */}
       {/* </div> */}
     </div>

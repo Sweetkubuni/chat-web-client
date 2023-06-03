@@ -4,6 +4,18 @@ import ChatFooter from "./ChatFooter";
 import "./VideoJoin.css";
 import { usernames } from "../testdata/data.js";
 import LiveKitHelper from "../helper/LiveKitHelper";
+import MicIcon from "~/images/micro.png";
+import TurnOnCameraIcon from "~/images/turn_on_camera.png";
+import ShareScreenIcon from "~/images/share_screen.png";
+import EndCallIcon from "~/images/end_call.png";
+import "solid-slider/slider.css";
+import {
+  Slider,
+  createSlider,
+  SliderProvider,
+  SliderButton,
+} from "solid-slider";
+
 enum Command {
   SUBSCRIBE = 0,
   UNSUBSCRIBE = 1,
@@ -21,7 +33,11 @@ interface Content {
   message: string;
 }
 
-let livekitHelper: any | undefined;
+const livekitHelper = new LiveKitHelper(
+  "ws://localhost:7880",
+  "devkey",
+  "secret"
+);
 
 export default function VideoJoin(props) {
   //TODO: replace userId with correct one when auth done
@@ -41,7 +57,11 @@ export default function VideoJoin(props) {
     }
   };
   const toggleVideo = async (message: ListElem) => {
-    livekitHelper.toggleVideo();
+    await livekitHelper.toggleVideo();
+  };
+
+  const toggleAudio = async (message: ListElem) => {
+    await livekitHelper.toggleAudio();
   };
 
   const sendMessage = async (msg: string) => {
@@ -71,19 +91,79 @@ export default function VideoJoin(props) {
   };
 
   onMount(async () => {
-    window.addEventListener("ROOM_CONNECTED", (params: any) => {
-      props.livekitHelper.toggleVideo();
-    });
+    // window.addEventListener("ROOM_CONNECTED", (params: any) => {
+    //   props.livekitHelper.toggleVideo();
+    // });
   });
 
   return (
-    <div class="join-container">
-      {/* <div class="video-container">
-        <video id="video-element" class="grid-style" controls></video>
-      </div> */}
-      <div class="join-window" id="joins-area">
-        <div id="join-element" class="grid-style" controls></div>
-      </div>
-    </div>
+    <SliderProvider>
+      <Slider options={{ loop: true }}>
+        {/*<div class="join-container">*/}
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div id="item-current-user" class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+        <div class="join-window" id="joins-area">
+          <div id="join-element" class="grid-style" controls></div>
+          <div class="video-action">
+            <div class="action-item action-item-bg">
+              <i class="fas fa-light fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+        {/*</div>*/}
+      </Slider>
+      {/*<SliderButton prev>Previous</SliderButton>*/}
+      {/*<SliderButton next>Next</SliderButton>*/}
+    </SliderProvider>
   );
 }

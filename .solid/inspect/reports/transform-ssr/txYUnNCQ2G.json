@@ -4,28 +4,28 @@
     {
       "name": "__load__",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave, } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";\n",
-      "start": 1684640175027,
-      "end": 1684640175027
+      "start": 1685810326391,
+      "end": 1685810326391
     },
     {
       "name": "solid",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
-      "start": 1684640175027,
-      "end": 1684640175030,
+      "start": 1685810326391,
+      "end": 1685810326394,
       "order": "pre"
     },
     {
       "name": "vite:define",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
-      "start": 1684640175030,
-      "end": 1684640175030,
+      "start": 1685810326394,
+      "end": 1685810326394,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export * from \"/node_modules/@solidjs/router/dist/components.jsx\";\nexport * from \"/node_modules/@solidjs/router/dist/integration.js\";\nexport * from \"/node_modules/@solidjs/router/dist/lifecycle.js\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"/node_modules/@solidjs/router/dist/routing.js\";\nexport { mergeSearchString as _mergeSearchString } from \"/node_modules/@solidjs/router/dist/utils.js\";",
-      "start": 1684640175030,
-      "end": 1684640175034,
+      "start": 1685810326394,
+      "end": 1685810326399,
       "order": "normal"
     }
   ]

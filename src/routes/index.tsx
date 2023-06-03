@@ -17,7 +17,7 @@ const livekitHelper = new LiveKitHelper(
 // Connect to a room
 const roomName = "my-first-room";
 const accessToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc0MDM3MDUsImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NDE2MzcwNSwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.l-VATsEHCf6EUwbUayeuiZbDPZaAQpNhzMZyixZJVn4";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4NzM1NzAsImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY4NTYzMzU3MCwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.OyPYtfrs7_lgP-iKSdIjkPb9KbyDpMeVcjV3j-Hkmqw";
 
 livekitHelper
   .connectToRoom("ws://localhost:7880", accessToken)
@@ -61,12 +61,14 @@ livekitHelper
 export default function Home() {
   return (
     <main>
-      <Navbar class="navbar" />
-      <div class="flex">
-        <VideoWindow livekitHelper={livekitHelper} class="video-window" />
-        <ChatWindow livekitHelper={livekitHelper} class="chat-window" />
+      <div class="chat-room-container">
+        <Navbar class="navbar" />
+        <div class="flex video-live-chat">
+          <VideoWindow livekitHelper={livekitHelper} class="video-window" />
+          <ChatWindow livekitHelper={livekitHelper} class="chat-window" />
+        </div>
+        <VideoJoin livekitHelper={livekitHelper} class="video-window" />
       </div>
-      <VideoJoin livekitHelper={livekitHelper} class="video-window" />
     </main>
   );
 }

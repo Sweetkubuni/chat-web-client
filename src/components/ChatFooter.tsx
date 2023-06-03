@@ -1,4 +1,6 @@
 import { Accessor, Setter, createSignal } from "solid-js";
+import "./ChatFooter.css";
+import SendMessageIcon from "~/images/send-message.png";
 
 interface ListArg {
   sendMessage: (message: string) => Promise<void>;
@@ -36,6 +38,9 @@ export default function ChatFooter(props: ListArg) {
           height: `${height()}px`,
         }}
       />
+      <div class="send-message">
+          <img class="send-message-icon" src={SendMessageIcon}/>
+      </div>
     </div>
   );
 }

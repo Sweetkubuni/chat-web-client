@@ -4,35 +4,35 @@
     {
       "name": "__load__",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = $FILE_ROUTES;\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1684640174975,
-      "end": 1684640174975
+      "start": 1685810326312,
+      "end": 1685810326312
     },
     {
       "name": "solid-start-file-system-router",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = [];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1684640174975,
-      "end": 1684640174975,
+      "start": 1685810326312,
+      "end": 1685810326312,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = [];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1684640174975,
-      "end": 1684640174979,
+      "start": 1685810326312,
+      "end": 1685810326317,
       "order": "pre"
     },
     {
       "name": "vite:define",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = [];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1684640174979,
-      "end": 1684640174979,
+      "start": 1685810326317,
+      "end": 1685810326317,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = [];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1684640174979,
-      "end": 1684640174979,
+      "start": 1685810326318,
+      "end": 1685810326318,
       "order": "normal"
     }
   ]

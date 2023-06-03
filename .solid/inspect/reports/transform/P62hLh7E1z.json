@@ -1,0 +1,32 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/room-card/RoomCard.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".room-card {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 16px;\r\n    align-items: start;\r\n    margin-bottom: 60px;\r\n}\r\n\r\n.room-card .card-link {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.room-card-thumbnail {\r\n    width: 100%;\r\n    max-width: 300px;\r\n    min-height: 150px;\r\n    height: auto;\r\n    background: #d9d9d9;\r\n    border-radius: 8px;\r\n}\r\n\r\n.room-card-title {\r\n    font-size: 20px;\r\n    color: #FFF;\r\n}",
+      "start": 1685810327673,
+      "end": 1685810327673
+    },
+    {
+      "name": "vite:css",
+      "result": ".room-card {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 16px;\r\n    align-items: start;\r\n    margin-bottom: 60px;\r\n}\r\n\r\n.room-card .card-link {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.room-card-thumbnail {\r\n    width: 100%;\r\n    max-width: 300px;\r\n    min-height: 150px;\r\n    height: auto;\r\n    background: #d9d9d9;\r\n    border-radius: 8px;\r\n}\r\n\r\n.room-card-title {\r\n    font-size: 20px;\r\n    color: #FFF;\r\n}",
+      "start": 1685810327673,
+      "end": 1685810327673,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/room-card/RoomCard.css\"\nconst __vite__css = \".room-card {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 16px;\\r\\n    align-items: start;\\r\\n    margin-bottom: 60px;\\r\\n}\\r\\n\\r\\n.room-card .card-link {\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\n.room-card-thumbnail {\\r\\n    width: 100%;\\r\\n    max-width: 300px;\\r\\n    min-height: 150px;\\r\\n    height: auto;\\r\\n    background: #d9d9d9;\\r\\n    border-radius: 8px;\\r\\n}\\r\\n\\r\\n.room-card-title {\\r\\n    font-size: 20px;\\r\\n    color: #FFF;\\r\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1685810327673,
+      "end": 1685810327673,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/chat-room/room-card/RoomCard.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/room-card/RoomCard.css\"\nconst __vite__css = \".room-card {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 16px;\\r\\n    align-items: start;\\r\\n    margin-bottom: 60px;\\r\\n}\\r\\n\\r\\n.room-card .card-link {\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n}\\r\\n\\r\\n.room-card-thumbnail {\\r\\n    width: 100%;\\r\\n    max-width: 300px;\\r\\n    min-height: 150px;\\r\\n    height: auto;\\r\\n    background: #d9d9d9;\\r\\n    border-radius: 8px;\\r\\n}\\r\\n\\r\\n.room-card-title {\\r\\n    font-size: 20px;\\r\\n    color: #FFF;\\r\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1685810327673,
+      "end": 1685810327673,
+      "order": "normal"
+    }
+  ]
+}

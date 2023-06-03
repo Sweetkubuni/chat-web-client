@@ -1,0 +1,32 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/sidebar/Sidebar.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".chat-room-sidebar {\r\n    width: 75px;\r\n    height: 100%;\r\n    border-radius: 15px;\r\n    background-color: #4d4e72;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 22px;\r\n    margin-top: 15px;\r\n    position: relative;\r\n}\r\n\r\n.live-icon {\r\n    width: 57px;\r\n    margin: 0 auto;\r\n    padding-top: 33px;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}\r\n\r\n.bookmark-icon {\r\n    width: 41px;\r\n    margin: 0 auto;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}\r\n\r\n.login-icon {\r\n    position: absolute;\r\n    bottom: 12px;\r\n    left: 12px;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}",
+      "start": 1685810327707,
+      "end": 1685810327707
+    },
+    {
+      "name": "vite:css",
+      "result": ".chat-room-sidebar {\r\n    width: 75px;\r\n    height: 100%;\r\n    border-radius: 15px;\r\n    background-color: #4d4e72;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 22px;\r\n    margin-top: 15px;\r\n    position: relative;\r\n}\r\n\r\n.live-icon {\r\n    width: 57px;\r\n    margin: 0 auto;\r\n    padding-top: 33px;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}\r\n\r\n.bookmark-icon {\r\n    width: 41px;\r\n    margin: 0 auto;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}\r\n\r\n.login-icon {\r\n    position: absolute;\r\n    bottom: 12px;\r\n    left: 12px;\r\n    :hover {\r\n        cursor: pointer;\r\n    }\r\n}",
+      "start": 1685810327707,
+      "end": 1685810327707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/sidebar/Sidebar.css\"\nconst __vite__css = \".chat-room-sidebar {\\r\\n    width: 75px;\\r\\n    height: 100%;\\r\\n    border-radius: 15px;\\r\\n    background-color: #4d4e72;\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 22px;\\r\\n    margin-top: 15px;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\n.live-icon {\\r\\n    width: 57px;\\r\\n    margin: 0 auto;\\r\\n    padding-top: 33px;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\\r\\n\\r\\n.bookmark-icon {\\r\\n    width: 41px;\\r\\n    margin: 0 auto;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\\r\\n\\r\\n.login-icon {\\r\\n    position: absolute;\\r\\n    bottom: 12px;\\r\\n    left: 12px;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1685810327707,
+      "end": 1685810327708,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/chat-room/sidebar/Sidebar.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/components/chat-room/sidebar/Sidebar.css\"\nconst __vite__css = \".chat-room-sidebar {\\r\\n    width: 75px;\\r\\n    height: 100%;\\r\\n    border-radius: 15px;\\r\\n    background-color: #4d4e72;\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    gap: 22px;\\r\\n    margin-top: 15px;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\n.live-icon {\\r\\n    width: 57px;\\r\\n    margin: 0 auto;\\r\\n    padding-top: 33px;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\\r\\n\\r\\n.bookmark-icon {\\r\\n    width: 41px;\\r\\n    margin: 0 auto;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\\r\\n\\r\\n.login-icon {\\r\\n    position: absolute;\\r\\n    bottom: 12px;\\r\\n    left: 12px;\\r\\n    :hover {\\r\\n        cursor: pointer;\\r\\n    }\\r\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1685810327708,
+      "end": 1685810327708,
+      "order": "normal"
+    }
+  ]
+}
