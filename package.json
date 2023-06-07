@@ -21,7 +21,7 @@
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
     "livekit-client": "^1.9.4",
-    "solid-js": "^1.7.2",
+    "solid-js": "^1.7.5",
     "solid-slider": "^1.3.12",
     "dotenv": "14.3.2",
     "solid-start": "^0.2.26",
