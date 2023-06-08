@@ -11,12 +11,13 @@ interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = ({}) => {
   const [value, setValue] = createSignal<boolean>(true);
-    let ref: HTMLDivElement;
+    let refCreateVid: HTMLDivElement;
+    let refLogin: HTMLDivElement;
     const [show, setShow] = createSignal(false);
     const [showCreateVideo, setShowCreateVideo] = createSignal(false);
 
     const handleClick = (event: MouseEvent) => {
-        if(!ref.contains(event.target)) {
+        if(!refLogin.contains(event.target)) {
             setShow(false);
         }
     };
@@ -28,7 +29,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
     }
 
     const handleClickCreateVideo = (event: MouseEvent) => {
-        if(!ref.contains(event.target)) {
+        if(!refCreateVid.contains(event.target)) {
             setShowCreateVideo(false);
         }
     };
@@ -50,10 +51,10 @@ const Sidebar: FC<SidebarProps> = ({}) => {
         <div class="login-icon">
             <img src={LoginIcon} onclick={showPopup} />
         </div>
-        <div ref={ref!}>
+        <div ref={refLogin!}>
             {show() ? <LoginPopup status={value()} /> : ''}
         </div>
-        <div ref={ref!}>
+        <div ref={refCreateVid!}>
             {showCreateVideo() ? <CreateVideoPopup status={value()} /> : ''}
         </div>
     </div>
