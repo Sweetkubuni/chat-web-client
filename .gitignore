@@ -128,5 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-.**/
-!/.gitignore
+# SolidStart
+.solid
+
+# TEMP
+src/_generated/*
