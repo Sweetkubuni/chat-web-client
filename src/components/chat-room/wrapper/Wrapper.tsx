@@ -7,7 +7,7 @@ import {createSignal} from "solid-js";
 interface ChatRoomWrapperProps {}
 
 const ChatRoomWrapper: FC<ChatRoomWrapperProps> = ({}) => {
-  const [value, setValue] = createSignal<boolean>(false);
+  const [value, setValue] = createSignal<boolean>(true);
   return (
     <div class="chat-room-wrapper">
       <Sidebar />

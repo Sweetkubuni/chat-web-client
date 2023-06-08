@@ -43,6 +43,10 @@ p {
   justify-content: space-between;
 }
 
+.video-live-chat {
+  margin-bottom: 118px;
+}
+
 .chat-window {
   /* margin-right: auto; */
 }
@@ -51,4 +55,8 @@ p {
 }
 .navbar{
   
+}
+
+.chat-room-container {
+  margin: 50px 80px;
 }

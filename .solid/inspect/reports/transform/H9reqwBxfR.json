@@ -1,0 +1,25 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/node_modules/solid-start/root/Meta.tsx?v=f29bfa48",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { renderTags } from \"@solidjs/meta\";\nimport { useContext } from \"solid-js\";\nimport { ssr, useAssets } from \"solid-js/web\";\nimport { ServerContext } from \"../server/ServerContext\";\n\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}\n",
+      "start": 1685810327349,
+      "end": 1685810327349
+    },
+    {
+      "name": "solid",
+      "result": "import { renderTags } from \"@solidjs/meta\";\nimport { useContext } from \"solid-js\";\nimport { ssr, useAssets } from \"solid-js/web\";\nimport { ServerContext } from \"../server/ServerContext\";\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}",
+      "start": 1685810327349,
+      "end": 1685810327352,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { renderTags } from \"/node_modules/@solidjs/meta/dist/index.jsx?v=f29bfa48\";\nimport { useContext } from \"/node_modules/.vite/deps/solid-js.js?v=1d40a96a\";\nimport { ssr, useAssets } from \"/node_modules/.vite/deps/solid-js_web.js?v=1d40a96a\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx?v=f29bfa48\";\nexport default function Meta() {\n  const context = useContext(ServerContext);\n  // @ts-expect-error The ssr() types do not match the Assets child types\n  useAssets(() => ssr(renderTags(context.tags)));\n  return null;\n}",
+      "start": 1685810327353,
+      "end": 1685810327354,
+      "order": "normal"
+    }
+  ]
+}

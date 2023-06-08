@@ -24,8 +24,10 @@ import {
   createAudioAnalyser,
   setLogLevel,
   supportsAV1,
-  supportsVP9,
+  supportsVP9, RemoteTrack,
 } from 'livekit-client';
+import ShareScreenIcon from "~/images/screen-share.png";
+import StopShareScreenIcon from "~/images/stop-screen-share.png";
 
 let currentRoom: Room | undefined;
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -123,15 +125,15 @@ class LiveKitHelper {
         //     $('local-volume')?.setAttribute('value', calculateVolume().toFixed(4));
         //   }, 200);
         // }
-        this.renderParticipant(room.localParticipant);
+        // this.renderParticipant(room.localParticipant);
         // updateButtonsForPublishState();
-        // renderScreenShare(room);
+        this.renderScreenShare(room);
       })
-      // .on(RoomEvent.LocalTrackUnpublished, () => {
-      //   renderParticipant(room.localParticipant);
-      //   updateButtonsForPublishState();
-      //   renderScreenShare(room);
-      // })
+      .on(RoomEvent.LocalTrackUnpublished, () => {
+        //   renderParticipant(room.localParticipant);
+        //   this.updateButtonsForPublishState();
+        this.renderScreenShare(room);
+      })
       .on(RoomEvent.RoomMetadataChanged, (metadata) => {
         // console.log('new metadata for room', metadata);
       })
@@ -156,12 +158,12 @@ class LiveKitHelper {
       .on(RoomEvent.TrackSubscribed, (track, pub, participant) => {
         // console.log('subscribed to track', pub.trackSid, participant.identity);
         this.renderParticipant(participant);
-        // renderScreenShare(room);
+        this.renderScreenShare(room);
       })
       .on(RoomEvent.TrackUnsubscribed, (_, pub, participant) => {
         // console.log('unsubscribed from track', pub.trackSid);
         this.renderParticipant(participant);
-        // renderScreenShare(room);
+        this.renderScreenShare(room);
       })
       .on(RoomEvent.SignalConnected, async () => {
         // const signalConnectionTime = Date.now() - startTime;
@@ -171,7 +173,7 @@ class LiveKitHelper {
         // if (shouldPublish) {
         //   await room.localParticipant.enableCameraAndMicrophone();
         //   console.log(`tracks published in ${Date.now() - startTime}ms`);
-        //   updateButtonsForPublishState();
+        // this.updateButtonsForPublishState();
       })
     try {
       // debugger
@@ -216,6 +218,7 @@ class LiveKitHelper {
     if (currentRoom) {
       currentRoom.disconnect();
     }
+    window.location.href = '/chat-room';
     // if (state.bitrateInterval) {
     //   clearInterval(state.bitrateInterval);
     // }
@@ -246,7 +249,8 @@ class LiveKitHelper {
     }
     await currentRoom.localParticipant.setMicrophoneEnabled(!enabled);
     this.setButtonDisabled('toggle-audio-button', false);
-    this.updateButtonsForPublishState();
+    this.renderSmallParticipant(currentRoom.localParticipant);
+    // this.updateButtonsForPublishState();
   }
 
   updateButtonsForPublishState() {
@@ -315,7 +319,7 @@ class LiveKitHelper {
     this.renderSmallParticipant(currentRoom.localParticipant);
 
     // update display
-    // updateButtonsForPublishState();
+    // this.updateButtonsForPublishState();
   }
 
   updateVideoSize(element: HTMLVideoElement, target: HTMLElement) {
@@ -355,15 +359,10 @@ class LiveKitHelper {
           
         </div>
       </div>
-      ${participant instanceof RemoteParticipant
-          ? `<div class="volume-control">
-        <input id="volume-${identity}" type="range" min="0" max="1" step="0.1" value="1" orient="vertical" />
-      </div>`
-          : `<progress id="local-volume" max="1" value="0" />`
-        }
-
     `;
-      $(`video-element`).replaceWith(div);
+      if ($(`video-element`)) {
+        $(`video-element`).replaceWith(div);
+      }
 
       const sizeElm = $(`size-${identity}`);
       const videoElm = <HTMLVideoElement>$(`video-${identity}`);
@@ -401,12 +400,12 @@ class LiveKitHelper {
       div!.classList.remove('speaking');
     }
 
-    if (participant instanceof RemoteParticipant) {
-      const volumeSlider = <HTMLInputElement>$(`volume-${identity}`);
-      volumeSlider.addEventListener('input', (ev) => {
-        participant.setVolume(Number.parseFloat((ev.target as HTMLInputElement).value));
-      });
-    }
+    // if (participant instanceof RemoteParticipant) {
+    //   const volumeSlider = <HTMLInputElement>$(`volume-${identity}`);
+    //   volumeSlider.addEventListener('input', (ev) => {
+    //     participant.setVolume(Number.parseFloat((ev.target as HTMLInputElement).value));
+    //   });
+    // }
 
     const cameraEnabled = cameraPub && cameraPub.isSubscribed && !cameraPub.isMuted;
     if (cameraEnabled) {
@@ -431,7 +430,7 @@ class LiveKitHelper {
       cameraPub?.videoTrack?.attach(videoElm);
     } else {
       // clear information display
-      $(`size-${identity}`)!.innerHTML = '';
+      // $(`size-${identity}`)!.innerHTML = '';
       if (cameraPub?.videoTrack) {
         // detach manually whenever possible
         cameraPub.videoTrack?.detach(videoElm);
@@ -576,6 +575,7 @@ class LiveKitHelper {
     }
 
     const cameraEnabled = cameraPub && cameraPub.isSubscribed && !cameraPub.isMuted;
+    const currentVideoELm = <HTMLAudioElement>$(`toggle-video-button`);
     if (cameraEnabled) {
       if (participant instanceof LocalParticipant) {
         // flip
@@ -596,6 +596,8 @@ class LiveKitHelper {
         };
       }
       cameraPub?.videoTrack?.attach(videoElm);
+      // videoElm.className = 'video-on';
+      currentVideoELm.innerHTML = '<i class="fas fa-regular fa-video"></i>';
     } else {
       // clear information display
       $(`size-${identity}`)!.innerHTML = '';
@@ -606,9 +608,14 @@ class LiveKitHelper {
         videoElm.src = '';
         videoElm.srcObject = null;
       }
+      // videoElm.className = 'video-off';
+      currentVideoELm.innerHTML = '<i class="fas fa-regular fa-video-slash"></i>';
     }
 
     const micEnabled = micPub && micPub.isSubscribed && !micPub.isMuted;
+    // console.log("micEnabled : ", micEnabled)
+    const currentAudioELm = <HTMLAudioElement>$(`toggle-audio-button`);
+    const currentSmallAudioELm = <HTMLAudioElement>$(`item-current-user`);
     if (micEnabled) {
       if (!(participant instanceof LocalParticipant)) {
         // don't attach local audio
@@ -622,9 +629,13 @@ class LiveKitHelper {
       }
       micElm.className = 'mic-on';
       micElm.innerHTML = '<i class="fas fa-microphone"></i>';
+      currentAudioELm.innerHTML = '<i class="fas fa-regular fa-microphone"></i>';
+      currentSmallAudioELm.innerHTML = '<i class="fas fa-light fa-microphone"></i>';
     } else {
       micElm.className = 'mic-off';
       micElm.innerHTML = '<i class="fas fa-microphone-slash"></i>';
+      currentAudioELm.innerHTML = '<i class="fas fa-regular fa-microphone-slash"></i>';
+      currentSmallAudioELm.innerHTML = '<i class="fas fa-light fa-microphone-slash"></i>';
     }
 
     // switch (participant.connectionQuality) {
@@ -638,6 +649,57 @@ class LiveKitHelper {
     //     signalElm.innerHTML = '';
     //   // do nothing
     // }
+  }
+
+  renderScreenShare(room: Room) {
+    const div = $('screenshare-area')!;
+    if (room.state !== ConnectionState.Connected) {
+      div.style.display = 'none';
+      return;
+    }
+    let participant: Participant | undefined;
+    let screenSharePub: TrackPublication | undefined = room.localParticipant.getTrack(
+      Track.Source.ScreenShare,
+    );
+    let screenShareAudioPub: RemoteTrackPublication | undefined;
+    if (!screenSharePub) {
+      room.participants.forEach((p) => {
+        if (screenSharePub) {
+          return;
+        }
+        participant = p;
+        const pub = p.getTrack(Track.Source.ScreenShare);
+        if (pub?.isSubscribed) {
+          screenSharePub = pub;
+        }
+        const audioPub = p.getTrack(Track.Source.ScreenShareAudio);
+        if (audioPub?.isSubscribed) {
+          screenShareAudioPub = audioPub;
+        }
+      });
+    } else {
+      participant = room.localParticipant;
+    }
+    const currentVideo = $('participants-area');
+    const shareScreenButton = $('share-screen-button');
+
+    if (screenSharePub && participant) {
+      div.style.display = 'block';
+      const videoElm = <HTMLVideoElement>$('screenshare-video');
+      screenSharePub.videoTrack?.attach(videoElm);
+      if (screenShareAudioPub) {
+        screenShareAudioPub.audioTrack?.attach(videoElm);
+      }
+      // videoElm.onresize = () => {
+      //   this.updateVideoSize(videoElm, <HTMLSpanElement>$('screenshare-resolution'));
+      // };
+      // const infoElm = $('screenshare-info')!;
+      // infoElm.innerHTML = `Screenshare from ${participant.identity}`;
+      currentVideo.style.display = 'none';
+    } else {
+      div.style.display = 'none';
+      currentVideo.style.display = 'block';
+    }
   }
 
   flipVideo() {
@@ -666,7 +728,7 @@ class LiveKitHelper {
     // setButtonDisabled('share-screen-button', true);
     await currentRoom.localParticipant.setScreenShareEnabled(!enabled, { audio: true });
     // setButtonDisabled('share-screen-button', false);
-    // updateButtonsForPublishState();
+    // this.updateButtonsForPublishState();
   }
 
   startAudio() {

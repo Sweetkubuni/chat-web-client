@@ -1,0 +1,18 @@
+{
+  "resolvedId": "C:/Users/QUAN DOAN/Desktop/freelance/chat-web-client/src/images/login.png",
+  "transforms": [
+    {
+      "name": "vite:asset",
+      "result": "export default \"/src/images/login.png\"",
+      "start": 1685810327666,
+      "end": 1685810327666
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export default \"/src/images/login.png\"",
+      "start": 1685810327666,
+      "end": 1685810327666,
+      "order": "normal"
+    }
+  ]
+}

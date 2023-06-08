@@ -118,7 +118,7 @@ export default function ChatWindow(props) {
         username: participant,
         content: new TextDecoder().decode(msg),
       },
-      type: MessageType.SEND,
+      type: MessageType.RECEIVE,
     });
   };
 
@@ -138,13 +138,13 @@ export default function ChatWindow(props) {
     //     console.log('Connected to room:', roomName);
     //     // Listen to participant events
     //     room.on('participantConnected', participant => {
-    //       console.log(`Participant connected: ${participant.identity}`);
+    //       console.log(Participant connected: ${participant.identity});
     //     });
     //     room.on('dataReceived', (msg: string, participant?: RemoteParticipant ) => {
     //       handleData(msg, participant);
     //   })
     //     room.on('participantDisconnected', participant => {
-    //       console.log(`Participant disconnected: ${participant.identity}`);
+    //       console.log(Participant disconnected: ${participant.identity});
     //     });
     //     // Disconnect from the room after some time
     //     setTimeout(() => {
@@ -155,7 +155,7 @@ export default function ChatWindow(props) {
     //     console.error('Error connecting to room:', error);
     //   });
     // let WEBSOCKET_URL : string = process.env.WEBSOCKET_URL!;
-    // let fullURL : string = `ws://` + WEBSOCKET_URL +`/chat?username=${username}`;
+    // let fullURL : string = ws:// + WEBSOCKET_URL +`/chat?username=${username}`;
     // console.debug('connecting to ' + fullURL);
     // // Create WebSocket connection.
     // socket = new WebSocket(fullURL);
@@ -257,14 +257,11 @@ export default function ChatWindow(props) {
   });
 
   return (
-    <div class="container">
-      {/* <div class="video-container">
-        <video id="video-element" class="grid-style" controls></video>
-      </div> */}
-      <div class="chat-window">
-        <ChatBody msgs={messages} containerRef={containerRef} />
-        <ChatFooter sendMessage={sendMessage} />
+      <div class="container">
+        <div class="chat-window">
+          <ChatBody msgs={messages} containerRef={containerRef} />
+          <ChatFooter sendMessage={sendMessage} />
+        </div>
       </div>
-    </div>
   );
 }
