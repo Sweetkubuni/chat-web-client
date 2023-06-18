@@ -38,9 +38,6 @@ export default function ChatBody(props: ListArg) {
   return (
     <div
       class="chat-body"
-      style={{
-        "overflow-y": "auto",
-      }}
       ref={props.containerRef}
     >
       <ul class="message-list">

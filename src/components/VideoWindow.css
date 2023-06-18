@@ -116,8 +116,20 @@
   padding-top: 8px;
 }
 
+.video-window .participant .info-bar, .video-window .participant .size {
+  display: none;
+}
+
 /* Mobile styles */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  #video-chatroom-area .video-action .action-item {
+    margin: 0 10px;
+  }
+
+  .video-window .participant > video {
+    height: 200px;
+  }
+}
 
 figure {
   max-width: 64rem;

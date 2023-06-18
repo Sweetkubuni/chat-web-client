@@ -80,3 +80,30 @@ p.word-count {
     font-size: 20px;
     color: #FFFFFF;
 }
+
+@media (max-width: 480px) {
+    .create-video-block #block-active {
+        width: 100%;
+        left: 0;
+        top: 17%;
+    }
+
+    .create-video-block .create-video-container {
+        padding: 0 10px;
+        width: 88%;
+    }
+
+    .upload-video-area {
+        width: 97%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .video-intro {
+        width: 76%;
+    }
+
+    .create-video-block .video-title {
+        margin-top: 40px
+    }
+}

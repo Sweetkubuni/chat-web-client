@@ -49,7 +49,7 @@ const Sidebar: FC<SidebarProps> = ({}) => {
             <img src={BookmarkIcon} onclick={showPopup} />
         </div>
         <div class="login-icon">
-            <img src={LoginIcon} onclick={showPopup} />
+            <img id="user-avatar" src={LoginIcon} onclick={showPopup} />
         </div>
         <div ref={refLogin!}>
             {show() ? <LoginPopup status={value()} /> : ''}

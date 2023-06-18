@@ -95,5 +95,9 @@
   padding-top: 8px;
 }
 
+.keen-slider {
+  display: none !important;
+}
+
 /* Mobile styles */
 @media only screen and (max-width: 600px) {}

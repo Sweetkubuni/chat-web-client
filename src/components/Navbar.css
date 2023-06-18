@@ -31,4 +31,15 @@
 }
 
 /* Mobile styles */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    margin: 50px 10px 20px;
+    height: 60px;
+  }
+
+  .avatar-pic {
+    width: 40px;
+    height: 40px;
+    margin: 10px 15px;
+  }
+}

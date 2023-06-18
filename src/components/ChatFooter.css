@@ -24,3 +24,13 @@
     visibility: visible;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 480px) {
+
+    .chat-footer .send-message {
+        right: 10px;
+        bottom: 25px;
+    }
+
+}

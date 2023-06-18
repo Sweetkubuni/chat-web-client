@@ -98,10 +98,11 @@
   
     .chat-body {
       padding: 0;
+      margin-top: 10px;
     }
   
     .message-list {
-      padding: 10px;
+      padding: 0px 10px;
     }
   
     .chat-footer {

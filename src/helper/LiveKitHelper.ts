@@ -218,7 +218,7 @@ class LiveKitHelper {
     if (currentRoom) {
       currentRoom.disconnect();
     }
-    window.location.href = '/chat-room';
+    window.location.href = '/';
     // if (state.bitrateInterval) {
     //   clearInterval(state.bitrateInterval);
     // }
@@ -345,6 +345,8 @@ class LiveKitHelper {
       // <span id="signal-${identity}"></span>
       //     <span id="mic-${identity}" class="mic-on"></span>
       div.innerHTML = `
+        <span id="size-${identity}" class="size">
+      </span>
       <video id="video-${identity}"></video>
       <audio id="audio-${identity}"></audio>
       <div class="info-bar">
@@ -616,6 +618,7 @@ class LiveKitHelper {
     // console.log("micEnabled : ", micEnabled)
     const currentAudioELm = <HTMLAudioElement>$(`toggle-audio-button`);
     const currentSmallAudioELm = <HTMLAudioElement>$(`item-current-user`);
+    console.log("micEnabled : ", micEnabled);
     if (micEnabled) {
       if (!(participant instanceof LocalParticipant)) {
         // don't attach local audio
