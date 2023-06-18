@@ -1,0 +1,126 @@
+.chat-room-wrapper {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    height: 94%;
+}
+
+.header-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+}
+
+.header-section > h2 {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 15px;
+}
+
+.search-area {
+    width: 100%;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.search-input {
+    width: 100%;
+    border-radius: 7px;
+    height: 58px;
+    padding-left: 8px;
+    background-color: #2B2C3B;
+    color: white;
+    font-size: 32px;
+    font-family: Outfit;
+    border: none;
+}
+
+.search-input::placeholder {
+    color: #939393;
+}
+
+.rooms-section {
+    margin: 42px 60px;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.no-room {
+    width: 100%;
+    height: 600px;
+    background: rgba(217, 217, 217, 0.16);
+    border: 5px dashed #000000;
+    border-radius: 10px;
+}
+
+.no-room > p {
+    font-size: 36px;
+    color: #FFFFFF;
+    padding-top: 250px;
+}
+
+@media (max-width: 480px) {
+    .chat-room-wrapper {
+        grid-template-columns: none;
+    }
+
+    .rooms-section {
+        margin: 0;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .search-area {
+        text-align: left;
+    }
+
+    .icon-menu {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        margin-top: -15px;
+        margin-left: 40px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-section > h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .card-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (min-width: 992px) {
+    .card-section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 1100px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

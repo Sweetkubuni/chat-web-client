@@ -1,0 +1,179 @@
+.block {
+    display: none;
+  }
+  #block-actie {
+    position: fixed;
+    background-color: rgba(236, 236, 236, 0);
+    z-index: 104;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .block-container {
+    background-color:#353035;
+    height: fit-content;
+    border-radius: 10px;
+  }
+  .content {
+    justify-content: center;
+    padding: 6px 30px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  .img-content {
+    align-items: center; 
+    display: flex;
+    margin-left: 0;
+    margin-right: 64px;
+
+  }
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  
+  }
+
+ 
+  .btn-login {
+    background-color: inherit;
+    font-weight: 700;
+    color: rgb(168, 160, 160);
+    padding-left: 8px;
+  }
+  .btn-remove {
+    background-color: white;
+    font-weight: 700;
+    color: rgb(168, 160, 160);
+    padding: 10px;
+    height: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  
+  .main-form {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .group-main {
+    box-sizing: border-box;
+    padding-block-end: 20px;
+  }
+  
+
+  .input-value {
+    appearance: none;
+    background-image: none;
+    
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+    inline-size: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color:#353035;
+
+    color: #ffff;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  .input-value::placeholder {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0px;
+    font-size: 17px;
+  }
+
+  .btn-submit {
+    box-sizing: border-box;
+  
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter,
+      transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding-top: 10px;
+    min-inline-size: 0px;
+    align-self: center;
+    :hover {
+      transform: scale(1.04);
+    }
+  }
+  .btn-submit-title {
+    position: relative;
+    background-color: #72B82B;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: 400;
+   padding: 11px 100px;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+  }
+  .title {
+    border: solid 2px #fff !important; 
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    font-size: 28px;
+    border-radius: 80px;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    position: relative;
+    height: 50px;
+  }
+  .title-log{
+    border: solid 2px #fff !important;
+    border-radius: 80px;
+    margin: 0;
+    height: 50px;
+    position: absolute;
+    left: -1px;
+  }
+  .sign-up-log {
+    margin: 6px 10px;
+    font-weight: 400;
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    top: -12px;
+  }
+  .title-log>p{
+    margin: -5px 20px;
+    padding: 8px 0;
+    color: #996600;
+  }
+  .sign-up-log>p {
+    margin: 0px 12px;
+    padding: 8px 0;
+  }
