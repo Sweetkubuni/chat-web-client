@@ -1,5 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.css";
-import { Title } from "solid-start";
+import { Title, createRouteData } from "solid-start";
 import ChatWindow from "~/components/ChatWindow";
 import VideoWindow from "~/components/VideoWindow";
 import VideoJoin from "~/components/VideoJoin";
@@ -12,10 +12,10 @@ import LoadingIcon from "~/images/loading.png";
 export default function Home() {
   return (
     <main>
-      <ChatRoomWrapper/>
+      <ChatRoomWrapper />
       <div id="overlay" style="display:none;">
         <div class="overlay-content">
-          <img class="loading-icon" src={LoadingIcon}/>
+          <img class="loading-icon" src={LoadingIcon} />
           <p id="register-info">Please wait...</p>
         </div>
       </div>
