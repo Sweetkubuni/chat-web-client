@@ -14,7 +14,6 @@ import {
 } from "solid-start";
 import "./root.css";
 
-
 export default function Root() {
   return (
     <Html lang="en">
@@ -27,8 +26,6 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-            {/* <A href="/">Index</A>
-            <A href="/about">About</A> */}
             <Routes>
               <FileRoutes />
             </Routes>
