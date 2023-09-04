@@ -5,13 +5,13 @@
 }
 
 .create-video-block .create-video-container {
-    background-color:#353035;
+    background-color: #353035;
     height: fit-content;
     border-radius: 10px;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 0 64px;
+    padding: 20px 64px;
     width: 100%;
 }
 
@@ -61,7 +61,7 @@
 p.word-count {
     text-align: right;
     margin-top: 0px;
-    margin-bottom: 45px ;
+    margin-bottom: 45px;
     color: #FFF;
 }
 
@@ -69,16 +69,26 @@ p.word-count {
     border: 3px dashed #D0CCCC;
     width: 100%;
     height: 267px;
-    margin-bottom: 86px;
+    margin-bottom: 20px;
 }
 
 .upload-video-area .upload-icon {
     padding-top: 54px;
 }
 
-.upload-video-area > p {
+.upload-video-area>p {
     font-size: 20px;
     color: #FFFFFF;
+}
+
+.upload-btn {
+    padding: 16px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.error-message {
+    color: rgb(244 63 94);
 }
 
 @media (max-width: 480px) {

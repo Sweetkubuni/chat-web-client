@@ -1,0 +1,120 @@
+.create-video-block #block-active {
+    width: 618px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.create-video-block .create-video-container {
+    background-color: #353035;
+    height: fit-content;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 64px;
+    width: 100%;
+}
+
+.create-video-block .video-title {
+    margin-top: 80px;
+    text-align: left;
+}
+
+.input-value {
+    padding: 5px;
+    background-color: #353035;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #D0CCCC;
+    font-family: Outfit;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.input-value::placeholder {
+    margin: 0px;
+    font-size: 17px;
+    font-family: Outfit;
+    font-size: 24px;
+    color: #7D7373;
+}
+
+.video-intro {
+    border: 1px solid #D0CCCC;
+    background-color: #353035;
+    width: 84%;
+    resize: none;
+    margin-top: 50px;
+    padding: 0 40px;
+    font-family: Outfit;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.video-intro::placeholder {
+    font-family: Outfit;
+    font-size: 24px;
+    color: #7D7373;
+}
+
+p.word-count {
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 45px;
+    color: #FFF;
+}
+
+.upload-video-area {
+    border: 3px dashed #D0CCCC;
+    width: 100%;
+    height: 267px;
+    margin-bottom: 20px;
+}
+
+.upload-video-area .upload-icon {
+    padding-top: 54px;
+}
+
+.upload-video-area>p {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.upload-btn {
+    padding: 16px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.error-message {
+    color: rgb(244 63 94);
+}
+
+@media (max-width: 480px) {
+    .create-video-block #block-active {
+        width: 100%;
+        left: 0;
+        top: 17%;
+    }
+
+    .create-video-block .create-video-container {
+        padding: 0 10px;
+        width: 88%;
+    }
+
+    .upload-video-area {
+        width: 97%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .video-intro {
+        width: 76%;
+    }
+
+    .create-video-block .video-title {
+        margin-top: 40px
+    }
+}

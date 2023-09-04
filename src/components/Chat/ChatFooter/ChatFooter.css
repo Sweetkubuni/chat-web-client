@@ -1,0 +1,36 @@
+.chat-footer {
+    position: relative;
+}
+
+.chat-footer textarea.message-input {
+    font-family: Outfit;
+    padding: 15px 30px 15px 10px;
+    height: 50px !important;
+}
+
+.chat-footer textarea.message-input::placeholder{
+    font-family: Outfit;
+}
+
+.chat-footer .send-message {
+    position: absolute;
+    right: 20px;
+    height: 25px;
+    visibility: hidden;
+    margin-top: -6px;
+}
+
+.chat-footer:hover .send-message {
+    visibility: visible;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .chat-footer .send-message {
+        right: 10px;
+        bottom: 25px;
+    }
+
+}
